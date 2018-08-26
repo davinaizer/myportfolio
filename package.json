@@ -1,5 +1,8 @@
 {
   "name": "myportfolio",
+  "babel": {
+    "presets": ["env", "react"]
+  },
   "version": "1.0.0",
   "description": "Naizer portfolio",
   "main": "src/app/index.js",
@@ -11,11 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/davinaizer/myportfolio.git"
   },
-  "keywords": [
-    "Webpack",
-    "4",
-    "Reactjs"
-  ],
+  "keywords": ["Webpack", "4", "Reactjs"],
   "author": "Davi Naizer",
   "license": "ISC",
   "bugs": {
@@ -23,6 +22,10 @@
   },
   "homepage": "https://github.com/davinaizer/myportfolio#readme",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0"
   },

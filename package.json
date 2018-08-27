@@ -4,18 +4,14 @@
   "description": "Naizer portfolio",
   "main": "src/app/index.js",
   "scripts": {
-    "start": "webpack --mode development",
+    "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davinaizer/myportfolio.git"
   },
-  "keywords": [
-    "Webpack",
-    "4",
-    "Reactjs"
-  ],
+  "keywords": ["Webpack", "4", "Reactjs"],
   "author": "Davi Naizer",
   "license": "ISC",
   "bugs": {

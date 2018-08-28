@@ -1,36 +1,60 @@
+// IMPORTS
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./src/static/index.html",
+// VARS DEF
+const devMode = process.env.NODE_ENV !== 'production';
+
+// PLUGINS DEF
+const CleanPlugin = new CleanWebpackPlugin(['dist/*']);
+
+const HtmlPlugin = new HtmlWebPackPlugin({
+  template: "./src/app/index.html",
   filename: "./index.html"
 });
 
+const MiniCssPlugin = new MiniCssExtractPlugin({
+  filename: devMode ? '[name].css' : '[name].[hash].css',
+  chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+})
+
+// WEBPACK CONF
 module.exports = {
   entry: "./src/app/main.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "js/main.js"
   },
-
+  devtool: 'source-map',
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: { loader: "babel-loader" }
       },
       {
         test: /\.html$/,
+        use: [{
+          loader: "html-loader",
+          options: { minimize: true }
+        }]
+      },
+      {
+        test: /\.s[ac]ss$/,
         use: [
-          {
-            loader: "html-loader",
-            options: { minimize: true }
-          }
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { url: false, sourceMap: devMode } },
+          { loader: 'sass-loader', options: { sourceMap: devMode } },
         ]
       }
     ]
   },
 
-  plugins: [htmlPlugin]
+  plugins: [
+    CleanPlugin,
+    HtmlPlugin,
+    MiniCssPlugin
+  ]
 };

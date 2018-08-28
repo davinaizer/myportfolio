@@ -22,10 +22,10 @@ const MiniCssPlugin = new MiniCssExtractPlugin({
 
 // WEBPACK CONF
 module.exports = {
-  entry: "./src/app/main.js",
+  entry: "./src/app/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "js/main.js"
+    filename: "js/index.js"
   },
   devtool: 'source-map',
   module: {

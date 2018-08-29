@@ -5,5 +5,7 @@ export default class TimelineItem extends React.Component {
     super(props);
   }
 
-  render() {}
+  render() {
+    return ();
+  }
 }

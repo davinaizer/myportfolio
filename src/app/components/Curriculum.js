@@ -5,5 +5,7 @@ export default class Curriculum extends React.Component {
     super(props);
   }
 
-  render() {}
+  render() {
+    return ();
+  }
 }

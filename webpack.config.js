@@ -2,13 +2,13 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 // VARS DEF
-const devMode = process.env.NODE_ENV !== 'production';
+const devMode = process.env.NODE_ENV !== "production";
 
 // PLUGINS DEF
-const CleanPlugin = new CleanWebpackPlugin(['dist/*']);
+const CleanPlugin = new CleanWebpackPlugin(["dist/*"]);
 
 const HtmlPlugin = new HtmlWebPackPlugin({
   template: "./src/app/index.html",
@@ -16,9 +16,9 @@ const HtmlPlugin = new HtmlWebPackPlugin({
 });
 
 const MiniCssPlugin = new MiniCssExtractPlugin({
-  filename: devMode ? '[name].css' : '[name].[hash].css',
-  chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
-})
+  filename: devMode ? "[name].css" : "[name].[hash].css",
+  chunkFilename: devMode ? "[id].css" : "[id].[hash].css"
+});
 
 // WEBPACK CONF
 module.exports = {
@@ -27,45 +27,53 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "js/index.js"
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: { loader: "babel-loader" }
       },
       {
         test: /\.html$/,
-        use: [{
-          loader: "html-loader",
-          options: { minimize: true }
-        }]
+        use: [
+          {
+            loader: "html-loader",
+            options: { minimize: true }
+          }
+        ]
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 8192,
+              name: devMode ? "[path][name].[ext]" : "[path][hash]-[name].[ext]"
+            }
+          }
+        ]
       },
       {
         test: /\.s[ac]ss$/,
         use: [
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { url: false, sourceMap: devMode } },
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          { loader: "css-loader", options: { url: false, sourceMap: devMode } },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               plugins: function() {
-                return [
-                  require('precss'),
-                  require('autoprefixer')
-                ];
+                return [require("precss"), require("autoprefixer")];
               }
             }
           },
-          { loader: 'sass-loader', options: { sourceMap: devMode } },
+          { loader: "sass-loader", options: { sourceMap: devMode } }
         ]
       }
     ]
   },
 
-  plugins: [
-    CleanPlugin,
-    HtmlPlugin,
-    MiniCssPlugin
-  ]
+  plugins: [CleanPlugin, HtmlPlugin, MiniCssPlugin]
 };

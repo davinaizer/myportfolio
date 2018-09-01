@@ -1,9 +1,9 @@
-import React from "react";
+import React, {Component} from 'react';
 import { Container, Row, Col } from "reactstrap";
 
 import ipadImg from "../img/ipad.png";
 
-export default class About extends React.Component {
+export default class About extends Component {
   constructor(props) {
     super(props);
   }
@@ -14,15 +14,9 @@ export default class About extends React.Component {
         <Container>
           <Row>
             <Col lg="8" className="mx-auto">
-              <h2 className="mb-4">Built with Bootstrap 4</h2>
+              <h2 className="mb-5">About</h2>
               <p className="">
-                Grayscale is a free Bootstrap theme created by Start Bootstrap.
-                It can be yours right now, simply download the template on
-                <a href="http://startbootstrap.com/template-overviews/grayscale/">
-                  the preview page
-                </a>
-                . The theme is open source, and you can use it for any purpose,
-                personal or commercial.
+                Ut ex in exercitation dolor non esse cillum ad non nulla in labore esse ea est magna dolor officia ex ea cillum et consectetur anim ex incididunt id aliquip dolor aliqua enim anim et.
               </p>
             </Col>
           </Row>

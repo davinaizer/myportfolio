@@ -1,11 +1,11 @@
-import React from "react";
+import React, {Component} from 'react';
 import { Container, Row, Col } from "reactstrap";
 
 import masterheadImg from "../img/bg-masthead.jpg";
 import demoImg01 from "../img/demo-image-01.jpg";
 import demoImg02 from "../img/demo-image-02.jpg";
 
-export default class Projects extends React.Component {
+export default class Projects extends Component {
   constructor(props) {
     super(props);
   }
@@ -14,6 +14,9 @@ export default class Projects extends React.Component {
     return (
       <section id="projects" className="projects-section bg-light">
         <Container>
+          <div className="mx-auto text-center">
+            <h2 className="mb-4">Projects</h2>
+          </div>
 
           <Row noGutters className="align-items-center mb-4 mb-lg-5">
             <Col xl="8" lg="7">

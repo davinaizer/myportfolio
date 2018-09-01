@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from 'react';
 import {
   Collapse,
   Navbar,
@@ -9,7 +9,7 @@ import {
   NavLink
 } from "reactstrap";
 
-export default class Example extends React.Component {
+export default class Example extends Component {
   constructor(props) {
     super(props);
 

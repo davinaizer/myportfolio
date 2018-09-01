@@ -1,79 +1,87 @@
 // IMPORTS
-const path = require("path");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // VARS DEF
-const devMode = process.env.NODE_ENV !== "production";
+const devMode = process.env.NODE_ENV !== 'production';
 
 // PLUGINS DEF
-const CleanPlugin = new CleanWebpackPlugin(["dist/*"]);
+const CleanPlugin = new CleanWebpackPlugin(['dist/*']);
 
 const HtmlPlugin = new HtmlWebPackPlugin({
-  template: "./src/app/index.html",
-  filename: "./index.html"
+  template: './src/app/index.html',
+  filename: './index.html',
 });
 
 const MiniCssPlugin = new MiniCssExtractPlugin({
-  filename: devMode ? "[name].css" : "[name].[hash].css",
-  chunkFilename: devMode ? "[id].css" : "[id].[hash].css"
+  filename: devMode ? '[name].css' : '[name].[hash].css',
+  chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
 });
 
 // WEBPACK CONF
 module.exports = {
-  entry: "./src/app/index.js",
+  entry: './src/app/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "js/index.js"
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/index.js',
   },
-  devtool: "source-map",
+  devtool: 'source-map',
+  resolve: {
+    alias: {
+      // components: "./src/components/",
+      // img: "./src/img/"
+    },
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: { loader: "babel-loader" }
+        use: {loader: 'babel-loader'},
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
-            options: { minimize: true }
-          }
-        ]
+            loader: 'html-loader',
+            options: {minimize: true},
+          },
+        ],
       },
       {
         test: /\.(png|jp(e*)g|svg)$/,
         use: [
           {
-            loader: "url-loader",
+            loader: 'url-loader',
             options: {
               limit: 8192,
-              name: devMode ? "[path][name].[ext]" : "[path][hash]-[name].[ext]"
-            }
-          }
-        ]
+              name: devMode
+                ? '[path][name].[ext]'
+                : '[path][hash]-[name].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.s[ac]ss$/,
         use: [
-          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          { loader: "css-loader", options: { url: false, sourceMap: devMode } },
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          {loader: 'css-loader', options: {url: false, sourceMap: devMode}},
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               plugins: function() {
-                return [require("precss"), require("autoprefixer")];
-              }
-            }
+                return [require('precss'), require('autoprefixer')];
+              },
+            },
           },
-          { loader: "sass-loader", options: { sourceMap: devMode } }
-        ]
-      }
-    ]
+          {loader: 'sass-loader', options: {sourceMap: devMode}},
+        ],
+      },
+    ],
   },
 
-  plugins: [CleanPlugin, HtmlPlugin, MiniCssPlugin]
+  plugins: [CleanPlugin, HtmlPlugin, MiniCssPlugin],
 };

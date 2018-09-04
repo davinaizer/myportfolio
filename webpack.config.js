@@ -5,19 +5,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // VARS DEF
-const devMode = process.env.NODE_ENV !== 'production';
+const isDevMode = process.env.NODE_ENV !== 'production';
 
 // PLUGINS DEF
 const CleanPlugin = new CleanWebpackPlugin(['dist/*']);
-
 const HtmlPlugin = new HtmlWebPackPlugin({
   template: './src/app/index.html',
   filename: './index.html',
 });
-
 const MiniCssPlugin = new MiniCssExtractPlugin({
-  filename: devMode ? '[name].css' : '[name].[hash].css',
-  chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+  filename: isDevMode ? '[name].css' : '[name].[hash].css',
+  chunkFilename: isDevMode ? '[id].css' : '[id].[hash].css',
 });
 
 // WEBPACK CONF
@@ -27,11 +25,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/index.js',
   },
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   resolve: {
     alias: {
-      // components: "./src/components/",
-      // img: "./src/img/"
+      Components: './src/app/components/',
+      Containers: './src/app/containers/',
+      Images: './src/app/img/',
     },
   },
   module: {
@@ -41,12 +40,43 @@ module.exports = {
         exclude: /node_modules/,
         use: {loader: 'babel-loader'},
       },
+
       {
         test: /\.html$/,
         use: [
           {
             loader: 'html-loader',
             options: {minimize: true},
+          },
+        ],
+      },
+
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          isDevMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              url: true,
+              sourceMap: isDevMode,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: function() {
+                return [require('precss'), require('autoprefixer')];
+              },
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              data: '@import "app/styles/_variables.scss";',
+              includePaths:[__dirname, 'src'],
+              sourceMap: isDevMode,
+            },
           },
         ],
       },
@@ -57,27 +87,11 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              name: devMode
-                ? '[path][name].[ext]'
-                : '[path][hash]-[name].[ext]',
+              name: isDevMode
+                ? 'img/[name].[ext]'
+                : 'img/[hash]-[name].[ext]',
             },
           },
-        ],
-      },
-      {
-        test: /\.s[ac]ss$/,
-        use: [
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          {loader: 'css-loader', options: {url: false, sourceMap: devMode}},
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: function() {
-                return [require('precss'), require('autoprefixer')];
-              },
-            },
-          },
-          {loader: 'sass-loader', options: {sourceMap: devMode}},
         ],
       },
     ],

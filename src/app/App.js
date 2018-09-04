@@ -1,12 +1,14 @@
-import React, {Component} from 'react';
-import {Container} from 'reactstrap';
+import React, { Component } from 'react';
 
-import Navbar from './components/Navbar';
-import Cover from './components/Cover';
-import About from './components/About';
-import Projects from './components/Projects';
-import Curriculum from './components/Curriculum';
-import Contact from './components/Contact';
+import './App.scss';
+
+import About from './containers/About';
+import Cover from './containers/Cover';
+import Contact from './containers/Contact';
+import Navbar from './containers/Navbar';
+import Resume from './containers/Resume';
+import Work from './containers/Work';
+
 
 export default class App extends Component {
   constructor(props) {
@@ -15,19 +17,14 @@ export default class App extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <div>
         <Navbar />
-        <hr />
         <Cover />
-        <hr />
         <About />
-        <hr />
-        <Projects />
-        <hr />
-        <Curriculum />
-        <hr />
+        <Work />
+        <Resume />
         <Contact />
-      </Container>
+      </div>
     );
   }
 }

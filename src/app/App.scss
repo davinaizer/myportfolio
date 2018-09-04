@@ -1,9 +1,25 @@
 @charset 'utf-8';
-@import '~bootstrap/scss/bootstrap';
 
-// Globals
+// App Theme - Boostrap Customization
+@import 'styles/theme';
 
-body {
-  margin-top: 60px;
-}
+// ----  VENDORS
+// @import '~bootstrap/scss/bootstrap';
 
+// Required
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+// Optional
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/code';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/transitions';
+// ----  VENDORS

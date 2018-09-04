@@ -1,0 +1,22 @@
+// Globals
+html,
+body {
+  height: 100%;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.section__title {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+.title__separator {
+  border-top: 4px solid $sizzling-red;
+  display: block;
+  margin-bottom: 30px;
+  width: 100px;
+}

@@ -1,0 +1,51 @@
+$card-border-size: 4px;
+
+.work-item {
+  background-color: $charcoal;
+  margin-top: 50px;
+
+  @include box_shadow(2);
+
+  &__title {
+    color: $sizzling-red;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__body {
+    color: $white;
+  }
+
+  &__thumb {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__card {
+    height: 100%;
+    min-height: 250px;
+    padding: 30px;
+    width: 100%;
+
+    &--flipped {
+      border: 0;
+      margin-left: $card-border-size;
+    }
+  }
+
+  &__tags {
+    bottom: 15px;
+    position: absolute;
+  }
+}
+
+.tag-item {
+  background-color: $jungle-green;
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 5px;
+  margin-top: 10px;
+  padding: 5px 10px;
+}

@@ -1,33 +1,8 @@
 .work-section {
-  background-color: $white;
-
-  // padding-top: 25px;
-
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $eerie-black;
-  }
-}
-
-.work-item {
-}
-
-.work-item--flipped {
-}
-
-.work-item__title {
-}
-
-.work-item__body {
-}
-
-.work-item__img {
-}
-
-.work-item__tag {
+  background-attachment: scroll;
+  // background-color: $white;
+  background-image: url('../img/work-bg.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: none;
 }

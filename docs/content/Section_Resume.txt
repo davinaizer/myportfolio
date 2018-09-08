@@ -1,7 +1,56 @@
-I've been creating web and learning content for almost 17 years now. I worked on many projects over these years along big companies like Kraft Foods Brasil, Electrolux Sweden, Volvo Motors, HSBC Bank, Furukawa Electric, GP Strategies, Metlife Brasil, O Boticário and many others.
+I've been creating web and learning content for almost 18 years now. I worked on many projects over these years along big companies like Kraft Foods Brasil, Electrolux Sweden, Volvo Motors, HSBC Bank, Furukawa Electric, GP Strategies, Metlife Brasil, O Boticário and many others.
 
-- software-based products
-- software engineering
-- product-development
-- understanding of all stages of e-learning development
-- training industry
+As a tech enthusiast and an eager learner, I'm always looking for new tools and ways to improve mine and team's quality of life. If I need to learn something new, no problem, just give some time and I will do my best.
+
+Work Experience
+2009-2017
+CO-FOUNDER AND EDUCATIONAL TECH MANAGER
+UNBOX Learning Experience
+
+2007-2009
+LEAD WEB/e-LEARNING DEVELOPER
+GPAC Comunicação Integrada
+
+2005-2007
+EDUCATIONAL TECH DEVELOPER
+HSBC Bank Brasil
+
+2001-2005
+WEB/e-LEARNING DEVELOPER
+GPAC Comunicação Integrada
+
+2000-2001
+COMPUTER TECHNICIAN
+Omni Informática
+
+Education
+COMPUTER ENGINEERING
+Universidade Positivo, Curitiba-PR
+
+ELECTRICAL ENGINEERING
+Universidade Positivo, Curitiba-PR
+
+ELECTRONICS
+Federal University of Technology - Paraná (UTFPR)
+
+Skills
+
+Graphical: Photoshop, Illustrator, Gravit Designer, Inkscape.
+IDE: Sublime Text, IntelliJ IDEA.
+Version Control: SVN, Bitbucket, Github
+Management: Trello, Toggl, Microsoft Project, Wrike.
+
+Languages/Frameworks:
+JavaScript (Vanilla, Jquery, Babel ES6, BackboneJS, ReactJS, GSAP)
+HTML, CSS3, SASS (BootStrap)
+ActionScript 3 (Gaia, Robotlegs)
+PHP
+SQL
+
+Server
+Linux Ubuntu, AWS
+
+Areas of Interest
+- Educational Tech
+- Serious Games
+- Motion Graphics

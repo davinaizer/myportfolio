@@ -73,7 +73,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              data: '@import "app/styles/_variables.scss";',
+              data: '@import "app/styles/_theme.scss";',
               includePaths:[__dirname, 'src'],
               sourceMap: isDevMode,
             },

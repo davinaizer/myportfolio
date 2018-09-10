@@ -9,6 +9,7 @@ import {
   NavLink,
 } from 'reactstrap';
 
+import './Navbar.scss';
 import brandImg from '../img/nav_brand.svg';
 
 export default class TopNav extends Component {

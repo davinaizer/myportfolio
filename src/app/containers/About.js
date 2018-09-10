@@ -25,8 +25,7 @@ export default class About extends Component {
                 fix things, repair and help people. It doesn’t matter the
                 subject, I’m always ready to give a hand.
                 <br />
-                <br />
-                I started in the tech world at the age of 8, on a Intel
+                <br />I started in the tech world at the age of 8, on a Intel
                 80386, coding in Microsoft’s BASIC. My first job was at the age
                 of 14, working as a Computer Technician. After that, I worked in
                 a lot of other companies, learning many different skills and
@@ -62,8 +61,8 @@ export default class About extends Component {
                 bigger.
                 <br />
                 <br />
-                Currently I’m working as a educational tech consultant and
-                freelance front-end developer in corporate? educational? sector.
+                Currently, I work as an Educational Tech Consultant and
+                front-end developer in Corporate E-learning market.
               </p>
             </Col>
           </Row>

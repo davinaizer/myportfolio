@@ -22,10 +22,12 @@ export default class Cover extends Component {
                 Front-end Web Developer
               </h2>
               <p className="mb-5">
-                Hello. Iʼm Davi, a problem solver who loves helping people come up
-                with new ideas and solutions.
+                Hello. Iʼm Davi, a problem solver who loves helping people come
+                up with new ideas and solutions.
               </p>
-              <Button color="primary">Get Started</Button>
+              <a href="#about">
+                <Button color="primary">GET TO KNOW</Button>
+              </a>
             </Col>
           </Row>
         </Container>

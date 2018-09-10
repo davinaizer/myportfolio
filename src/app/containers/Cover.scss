@@ -1,4 +1,6 @@
 .masthead {
+  @include box_shadow(3);
+
   background-attachment: scroll;
   background-image: url('../img/cover-bg.jpg');
   background-position: center bottom;

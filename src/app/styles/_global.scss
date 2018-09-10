@@ -7,26 +7,3 @@ body {
 section {
   padding: 100px 0;
 }
-
-.section__title {
-  font-size: 48px;
-  font-weight: bold;
-  text-transform: lowercase;
-
-  &--inverse {
-    color: $eerie-black;
-  }
-}
-
-.section__subtitle {
-  &--inverse {
-    color: $eerie-black;
-  }
-}
-
-.title__separator {
-  border-top: 4px solid $sizzling-red;
-  display: block;
-  margin-bottom: 30px;
-  width: 100px;
-}

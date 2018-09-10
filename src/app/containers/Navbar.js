@@ -38,7 +38,7 @@ export default class TopNav extends Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light fixed="top" expand="md">
+        <Navbar className="app-navbar" fixed="top" expand="md">
           <NavbarBrand href="/#">
             <img src={brandImg} width="40" height="40" alt="Home" />
           </NavbarBrand>

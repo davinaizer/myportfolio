@@ -25,10 +25,18 @@ export default class WorkItem extends Component {
             className={
               'work-item__card ' + (isFlipped ? 'work-item__card--flipped' : '')
             }>
-            <div className="d-flex h-100">
-              <div className="w-100 text-lg-left">
+            <div className="">
+              <div className="text-lg-left">
                 <p className="work-item__title">Elit ut sunt id.</p>
                 <p className="work-item__body small">
+                  Sunt dolor commodo minim aliquip id in magna aute id sint
+                  veniam ex dolor cupidatat labore in proident sit in non
+                  occaecat proident id et non enim.
+                  <br />
+                  Sunt dolor commodo minim aliquip id in magna aute id sint
+                  veniam ex dolor cupidatat labore in proident sit in non
+                  occaecat proident id et non enim.
+                  <br />
                   Sunt dolor commodo minim aliquip id in magna aute id sint
                   veniam ex dolor cupidatat labore in proident sit in non
                   occaecat proident id et non enim.

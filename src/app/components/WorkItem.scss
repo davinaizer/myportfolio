@@ -1,10 +1,10 @@
 $card-border-size: 4px;
 
 .work-item {
+  @include box_shadow(2);
+
   background-color: $charcoal;
   margin-top: 50px;
-
-  @include box_shadow(2);
 
   &__title {
     color: $sizzling-red;
@@ -27,6 +27,7 @@ $card-border-size: 4px;
     height: 100%;
     min-height: 250px;
     padding: 30px;
+    // padding-bottom: 125px;
     width: 100%;
 
     &--flipped {

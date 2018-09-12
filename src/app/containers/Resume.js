@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
-import {Container, Row, Col} from 'reactstrap';
+import React, { Component } from 'react';
+import { Container, Row, Col } from 'reactstrap';
 
-import '../styles/_variables.scss';
 import '../containers/Resume.scss';
 
 export default class Resume extends Component {
@@ -23,58 +22,64 @@ export default class Resume extends Component {
           <Row className="text-justify">
             <Col xs="12" sm="6" className="">
               <p>
-                I’ve been working with web-based applications, multimedia
-                materials and educfor almost since 2001. Being Macromedia Flash
-                my main development tool. For 4 years I worked at an advertising
-                agency (GPAC) as a Web Developer/Programmer and the materials I
-                developed were mostly related to training (e-Learnings, e-Books,
-                e-Presentations).
+                I've been creating web and learning content for almost 18 years
+                now. I worked on many projects over these years along big
+                companies like Kraft Foods Brasil, Electrolux Sweden, Volvo
+                Motors, HSBC Bank, Furukawa Electric, GP Strategies, Metlife
+                Brasil, O Boticário and many others.
               </p>
             </Col>
             <Col xs="12" sm="6" className="">
               <p>
-                Great part of these jobs were developed to HSBC and almost all
-                of them used Flash technology. After all these years of
-                professional relationship with HSBC, I was invited to join the
-                Training & Development area in 2005. During this year as a HSBC
-                employee, I had the opportunity to develop many important jobs
-                and support the area finding the needs and creating solutions
-                that weren’t possible before (See portfolio).
+                As a tech enthusiast and an eager learner, I'm always looking
+                for new tools and ways to improve mine and team's quality of
+                life. If I need to learn something new, no problem, just give
+                some time and I will do my best.
               </p>
             </Col>
           </Row>
 
           <Row className="mt-5">
             <Col sm="3">
-              <h2 className="resume__title">work<br />
-              experience</h2>
+              <h2 className="resume__title">
+                work
+                <br />
+                experience
+              </h2>
             </Col>
             <Col className="mx-auto">
-            <ul></ul>
+              <ul />
               <p>
-                CO-FOUNDER AND EDUCATIONAL TECH MANAGER
-                <br />
-                UNBOX Learning Experience
-                <br />
-                <br />
-                LEAD WEB/e-LEARNING DEVELOPER
-                <br />
-                GPAC Comunicação Integrada
+                <div className="resume__subtitle">
+                  2009-2017
+                  <br />
+                  CO-FOUNDER AND EDUCATIONAL TECH MANAGER
+                </div>
+                @UNBOX Learning Experience
                 <br />
                 <br />
-                EDUCATIONAL TECH DEVELOPER
-                <br />
-                HSBC Bank Brasil
-                <br />
-                <br />
-                WEB/e-LEARNING DEVELOPER
-                <br />
-                GPAC Comunicação Integrada
+                <div className="resume__subtitle">
+                  2007-2009
+                  <br />
+                  LEAD WEB/e-LEARNING DEVELOPER
+                </div>
+                @GPAC Comunicação Integrada
                 <br />
                 <br />
-                COMPUTER TECHNICIAN
+                <div className="resume__subtitle">
+                  2005-2007
+                  <br />
+                  EDUCATIONAL TECH DEVELOPER
+                </div>
+                @HSBC Bank Brasil
                 <br />
-                Omni Informática
+                <br />
+                <div className="resume__subtitle">
+                  2001-2005
+                  <br />
+                  WEB/e-LEARNING DEVELOPER
+                </div>
+                @GPAC Comunicação Integrada
               </p>
             </Col>
           </Row>
@@ -84,12 +89,33 @@ export default class Resume extends Component {
               <h2 className="resume__title">education</h2>
             </Col>
             <Col className="mx-auto">
-              <p><span className="resume__subtitle">COMPUTER ENGINEERING</span><br />
-              Universidade Positivo, Curitiba-PR</p>
-              <p><span className="resume__subtitle">ELECTRICAL ENGINEERING</span><br />
-              Universidade Positivo, Curitiba-PR</p>
-              <p><span className="resume__subtitle">ELECTRONICS</span><br />
-              Federal University of Technology - Paraná (UTFPR)</p>
+              <p>
+                <span className="resume__subtitle">
+                  2007-2010
+                  <br />
+                  COMPUTER ENGINEERING
+                </span>
+                <br />
+                Universidade Positivo, Curitiba-PR
+              </p>
+              <p>
+                <span className="resume__subtitle">
+                  2005-2006
+                  <br />
+                  ELECTRICAL ENGINEERING
+                </span>
+                <br />
+                Universidade Positivo, Curitiba-PR
+              </p>
+              <p>
+                <span className="resume__subtitle">
+                  1997-2000
+                  <br />
+                  ELECTRONICS
+                </span>
+                <br />
+                Federal University of Technology - Paraná (UTFPR)
+              </p>
             </Col>
           </Row>
 
@@ -97,37 +123,43 @@ export default class Resume extends Component {
             <Col sm="3">
               <h2 className="resume__title">skills</h2>
             </Col>
-            <Col>
-              <p className="resume__subtitle">SOFTWARES</p>
-              <p>Adobe PhotoShop
-              Adobe Premiere
-              Microsoft SQL SERVER 7
-              Macromedia Dreamweaver
-              Macromedia Flash
-              Windows NT
-              Linux Conectiva, Linux Red Hat
-              Mac OS</p>
+
+            <Col sm={{ size: 9, offset: 0 }}>
+              <span className="resume__subtitle">PROGRAMMING/LANGUAGES</span>
+              <p>AS3, JS, HTML, CSS, SCSS, PHP, Java, SQL, OOP, UML</p>
             </Col>
-            <Col>
-              <p className="resume__subtitle">DEV TOOLS</p>
-              <p>Adobe PhotoShop
-              Adobe Premiere
-              Microsoft SQL SERVER 7
-              Macromedia Dreamweaver
-              Macromedia Flash
-              Windows NT
-              Linux Conectiva, Linux Red Hat
-              Mac OS</p>
+
+            <Col sm={{ size: 9, offset: 3 }}>
+              <span className="resume__subtitle">FRAMEWORKS/LIBRARIES</span>
+              <p>jQuery, BackboneJS, ReactJS, Bootstrap, GSAP</p>
             </Col>
-            <Col>
-              <p className="resume__subtitle">LANGUAGES</p>
-              <p>ActionScript 3 (OOP)
-              ASP
-              SQL
-              XML
-              HTML
-              JavaScript
-              C</p>
+
+            <Col sm={{ size: 9, offset: 3 }}>
+              <span className="resume__subtitle">SERVER-SIDE/CLOUD</span>
+              <p>Linux, LAMP, AWS, EC2</p>
+            </Col>
+
+            <Col sm={{ size: 9, offset: 3 }}>
+              <span className="resume__subtitle">DEV TOOLS/IDE</span>
+              <p>Sublime Text, VS Code, IntelliJ IDEA, STAR UML</p>
+            </Col>
+
+            <Col sm={{ size: 9, offset: 3 }}>
+              <span className="resume__subtitle">DESIGN TOOLS</span>
+              <p>
+                Photoshop, Illustrator, Flash/Animate, Sketch, Gravit Designer,
+                Inkscape
+              </p>
+            </Col>
+
+            <Col sm={{ size: 9, offset: 3 }}>
+              <span className="resume__subtitle">VERSION CONTROL</span>
+              <p>SVN, GIT (Github, Bitbucket)</p>
+            </Col>
+
+            <Col sm={{ size: 9, offset: 3 }}>
+              <span className="resume__subtitle">MANAGEMENT</span>
+              <p>Trello, Toggl, Microsoft Project, Merlin Project</p>
             </Col>
           </Row>
         </Container>

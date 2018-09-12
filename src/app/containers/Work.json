@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "title": "E-book Framework AS3",
+      "description": "When Flash and ActionScript was the king of multimedia and RIA (Rich Internet Application), this was the main project at UNBOX (my former company), the heart of the development team.",
+      "images": {
+        "thumb": "ebookas_thumb.jpg",
+        "cover": "ebookas_cover.jpg",
+        "gallery": [
+          "ebookas_01.jpg",
+          "ebookas_02.jpg",
+          "ebookas_03.jpg",
+          "ebookas_04.jpg",
+          "ebookas_05.jpg"
+        ]
+      },
+      "links": [
+        {
+          "type": "demo",
+          "url": "http://davinaizer.atwebpages.com/ebookas/"
+        },
+        {
+          "type": "git",
+          "url": "http://www.google.com/"
+        }
+      ],
+      "tags": ["AS3", "SCSS", "JSFL", "GSAP", "SCORM", "OOP", "MVCS"]
+    },
+    {
+      "id": 1,
+      "title": "E-book Framework JS",
+      "description": "In 2014 the AS3 version of the framework was fully redesigned in HTML and JS using BackboneJS and Babel. Due to the nature of JS and HTML, the project had a simpler architecture compared to the original made in AS3.",
+      "images": {
+        "thumb": "ebookas_thumb.jpg",
+        "cover": "ebookas_cover.jpg",
+        "gallery": [
+          "ebookas_01.jpg",
+          "ebookas_02.jpg",
+          "ebookas_03.jpg",
+          "ebookas_04.jpg",
+          "ebookas_05.jpg"
+        ]
+      },
+      "links": [
+        {
+          "type": "demo",
+          "url": "http://davinaizer.atwebpages.com/ebookas/"
+        },
+        {
+          "type": "git",
+          "url": "http://www.google.com/"
+        }
+      ],
+      "tags": ["AS3", "SCSS", "JSFL", "GSAP", "SCORM", "OOP", "MVCS"]
+    },
+    {
+      "id": 2,
+      "title": "E-book Framework JS",
+      "description": "In 2014 the AS3 version of the framework was fully redesigned in HTML and JS using BackboneJS and Babel. Due to the nature of JS and HTML, the project had a simpler architecture compared to the original made in AS3.",
+      "images": {
+        "thumb": "ebookas_thumb.jpg",
+        "cover": "ebookas_cover.jpg",
+        "gallery": [
+          "ebookas_01.jpg",
+          "ebookas_02.jpg",
+          "ebookas_03.jpg",
+          "ebookas_04.jpg",
+          "ebookas_05.jpg"
+        ]
+      },
+      "links": [
+        {
+          "type": "demo",
+          "url": "http://davinaizer.atwebpages.com/ebookas/"
+        },
+        {
+          "type": "git",
+          "url": "http://www.google.com/"
+        }
+      ],
+      "tags": ["AS3", "SCSS", "JSFL", "GSAP", "SCORM", "OOP", "MVCS"]
+    },
+    {
+      "id": 4,
+      "title": "E-book Framework JS",
+      "description": "In 2014 the AS3 version of the framework was fully redesigned in HTML and JS using BackboneJS and Babel. Due to the nature of JS and HTML, the project had a simpler architecture compared to the original made in AS3.",
+      "images": {
+        "thumb": "ebookas_thumb.jpg",
+        "cover": "ebookas_cover.jpg",
+        "gallery": [
+          "ebookas_01.jpg",
+          "ebookas_02.jpg",
+          "ebookas_03.jpg",
+          "ebookas_04.jpg",
+          "ebookas_05.jpg"
+        ]
+      },
+      "links": [
+        {
+          "type": "demo",
+          "url": "http://davinaizer.atwebpages.com/ebookas/"
+        },
+        {
+          "type": "git",
+          "url": "http://www.google.com/"
+        }
+      ],
+      "tags": ["AS3", "SCSS", "JSFL", "GSAP", "SCORM", "OOP", "MVCS"]
+    }
+  ]
+}

@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
-import {Row, Col} from 'reactstrap';
+import React, { Component } from 'react';
+import { Button, Row, Col } from 'reactstrap';
 
 import './WorkItem.scss';
+import TagList from './TagList';
 
 export default class WorkItem extends Component {
   constructor(props) {
@@ -9,53 +10,41 @@ export default class WorkItem extends Component {
   }
 
   render() {
-    const props = this.props;
-    let isFlipped = props.isFlipped;
+    const { thumb, title, description, tags, isFlipped, onSelect } = this.props;
 
     return (
       <Row noGutters className="work-item">
         <Col md="6">
           <div className="work-item__thumb">
-            <img src={props.src} alt="" />
+            <a href="#" onClick={onSelect}>
+              <img src={'img/' + thumb} alt={title} />
+            </a>
           </div>
         </Col>
 
-        <Col md="6" className={isFlipped ? 'order-md-first' : ''}>
+        <Col md="6" className={isFlipped && 'order-md-first'}>
           <div
             className={
-              'work-item__card ' + (isFlipped ? 'work-item__card--flipped' : '')
-            }>
+              'work-item__card ' + (isFlipped && ' work-item__card--flipped')
+            }
+          >
             <div className="">
               <div className="text-lg-left">
-                <p className="work-item__title">Elit ut sunt id.</p>
-                <p className="work-item__body small">
-                  Sunt dolor commodo minim aliquip id in magna aute id sint
-                  veniam ex dolor cupidatat labore in proident sit in non
-                  occaecat proident id et non enim.
-                  <br />
-                  Sunt dolor commodo minim aliquip id in magna aute id sint
-                  veniam ex dolor cupidatat labore in proident sit in non
-                  occaecat proident id et non enim.
-                  <br />
-                  Sunt dolor commodo minim aliquip id in magna aute id sint
-                  veniam ex dolor cupidatat labore in proident sit in non
-                  occaecat proident id et non enim.
-                </p>
-              </div>
-
-              <div className="work-item__tags">
-                <div className="tag-item">HTML</div>
-                <div className="tag-item">JS</div>
-                <div className="tag-item">SASS</div>
-                <div className="tag-item">BackboneJS</div>
-                <div className="tag-item">React</div>
-                <div className="tag-item">Node.JS</div>
-                <div className="tag-item">Express</div>
-                <div className="tag-item">RequireJS</div>
-                <div className="tag-item">GSAP</div>
-                <div className="tag-item">GULP</div>
+                <p className="work-item__title">{title}</p>
+                <p className="work-item__body small">{description}</p>
               </div>
             </div>
+
+            <Button
+              className="work-item__btn"
+              size="sm"
+              color="secondary"
+              onClick={onSelect}
+            >
+              MORE INFO
+            </Button>
+
+            <TagList tags={tags} />
           </div>
         </Col>
       </Row>

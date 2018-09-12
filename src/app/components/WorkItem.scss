@@ -6,14 +6,25 @@ $card-border-size: 4px;
   background-color: $charcoal;
   margin-top: 50px;
 
-  &__title {
-    color: $sizzling-red;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
   &__body {
     color: $white;
+  }
+
+  &__btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  &__card {
+    height: 100%;
+    min-height: 250px;
+    padding: 30px;
+    width: 100%;
+
+    &--flipped {
+      border: 0;
+      margin-left: $card-border-size;
+    }
   }
 
   &__thumb {
@@ -23,30 +34,14 @@ $card-border-size: 4px;
     }
   }
 
-  &__card {
-    height: 100%;
-    min-height: 250px;
-    padding: 30px;
-    // padding-bottom: 125px;
-    width: 100%;
-
-    &--flipped {
-      border: 0;
-      margin-left: $card-border-size;
-    }
+  &__title {
+    color: $sizzling-red;
+    font-weight: bold;
+    // text-transform: uppercase;
   }
 
-  &__tags {
-    bottom: 15px;
-    position: absolute;
+  .tag-list {
+    // bottom: 15px;
+    // position: absolute;
   }
-}
-
-.tag-item {
-  background-color: $jungle-green;
-  display: inline-block;
-  font-size: 12px;
-  margin-right: 5px;
-  margin-top: 10px;
-  padding: 5px 10px;
 }

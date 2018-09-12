@@ -1,18 +1,44 @@
-import React, {Component} from 'react';
-import {Container} from 'reactstrap';
+import React, { Component } from 'react';
+import { Container } from 'reactstrap';
 
+import Modal from '../components/Modal';
+import WorkInfo from '../components/WorkInfo';
+import WorkList from '../components/WorkList';
+
+// ASSETS
+import './Work.scss';
 import '../img/work-bg.jpg';
-import '../containers/Work.scss';
 
-import WorkItem from '../components/WorkItem';
-
-import demoImg01 from '../img/works/work_02_tumb.jpg';
-import demoImg02 from '../img/works/work_03_tumb.jpg';
-import demoImg03 from '../img/works/work_04_tumb.jpg';
+// change to data pulled from DB
+const WorkData = require('./Work.json');
 
 export default class Work extends Component {
   constructor(props) {
     super(props);
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+
+    this.state = {
+      workData: WorkData.data,
+      isOpen: false,
+    };
+  }
+
+  openModal(evt) {
+    evt.preventDefault();
+
+    document.body.classList.add('modal-open');
+    this.setState(prevState => ({
+      isOpen: true,
+    }));
+  }
+
+  closeModal() {
+    document.body.classList.remove('modal-open');
+    this.setState(prevState => ({
+      isOpen: false,
+    }));
   }
 
   render() {
@@ -22,21 +48,14 @@ export default class Work extends Component {
           <div className="mb-5">
             <h2 className="section__title">Work</h2>
             <hr className="title__separator ml-0" />
-            <p className="section__subtitle">
-              In this page, you can find a small selection* of projects that I
-              worked on as a Developer, Team Lead or Project Manager.
-              <br />
-              <br />* Unfortunately, some of the projects are copyrighted or
-              covered by a non-disclosure agreement and cannot be made
-              available.
-            </p>
           </div>
 
-          <WorkItem src={demoImg01} />
-          <WorkItem src={demoImg02} isFlipped />
-          <WorkItem src={demoImg03} />
-          <WorkItem src={demoImg01} isFlipped />
+          <WorkList data={this.state.workData} onSelect={this.openModal} />
         </Container>
+
+        <Modal show={this.state.isOpen} onClose={this.closeModal}>
+          <WorkInfo />
+        </Modal>
       </section>
     );
   }

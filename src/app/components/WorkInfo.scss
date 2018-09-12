@@ -1,0 +1,40 @@
+.work-info {
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  &__cover {
+    margin: 30px 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__description {
+    margin: 30px 0;
+  }
+
+  &__links {
+    margin: 30px 0;
+
+    .btn {
+      margin-right: 30px;
+    }
+  }
+
+  &_gallery {
+    img {
+      margin-bottom: 30px;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__footer {
+    hr {
+      border: .5px solid $dark-vanilla;
+    }
+  }
+
+  .tag-list {
+    // margin-bottom: 30px;
+  }
+}

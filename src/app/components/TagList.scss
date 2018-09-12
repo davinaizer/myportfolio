@@ -1,0 +1,15 @@
+.tag-list {
+  ul {
+    margin: 15px 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      background-color: $jungle-green;
+      display: inline;
+      font-size: 12px;
+      margin-right: 5px;
+      padding: 5px 10px;
+    }
+  }
+}

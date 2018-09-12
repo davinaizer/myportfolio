@@ -26,7 +26,7 @@ export default class Cover extends Component {
                 up with new ideas and solutions.
               </p>
               <a href="#about">
-                <Button color="primary">GET TO KNOW</Button>
+                <Button className="cover__btn" color="primary" size="lg">GET TO KNOW</Button>
               </a>
             </Col>
           </Row>

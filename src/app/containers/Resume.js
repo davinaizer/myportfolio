@@ -96,7 +96,7 @@ export default class Resume extends Component {
                   COMPUTER ENGINEERING
                 </span>
                 <br />
-                Universidade Positivo, Curitiba-PR
+                @Universidade Positivo, Curitiba-PR
               </p>
               <p>
                 <span className="resume__subtitle">
@@ -105,7 +105,7 @@ export default class Resume extends Component {
                   ELECTRICAL ENGINEERING
                 </span>
                 <br />
-                Universidade Positivo, Curitiba-PR
+                @Universidade Positivo, Curitiba-PR
               </p>
               <p>
                 <span className="resume__subtitle">
@@ -114,7 +114,7 @@ export default class Resume extends Component {
                   ELECTRONICS
                 </span>
                 <br />
-                Federal University of Technology - Paraná (UTFPR)
+                @Federal University of Technology - Paraná (UTFPR)
               </p>
             </Col>
           </Row>

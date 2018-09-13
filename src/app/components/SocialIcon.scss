@@ -3,7 +3,12 @@
 
   img {
     height: 80px;
-    margin: 0 20px;
+    margin-right: 30px;
     width: 80px;
+    transition: all 0.25s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }

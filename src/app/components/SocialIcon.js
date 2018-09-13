@@ -2,20 +2,12 @@ import React, { Component } from 'react';
 
 import './SocialIcon.scss';
 
-export default class SocialIcon extends Component {
-  constructor(props) {
-    super(props);
-  }
+const SocialIcon = ({ icon, href }) => (
+  <div className="social__icon">
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <img src={icon} />
+    </a>
+  </div>
+);
 
-  render() {
-    const props = this.props;
-
-    return (
-      <div className="social__icon">
-        <a href={props.href ? props.href : '#'}>
-          <img src={props.src} />
-        </a>
-      </div>
-    );
-  }
-}
+export default SocialIcon;

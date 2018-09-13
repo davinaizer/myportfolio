@@ -1,16 +1,14 @@
 .tag-list {
-  vertical-align: bottom;
-
   ul {
-    margin: 15px 0;
-    padding: 0;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 
     li {
       background-color: $jungle-green;
       display: inline-block;
       font-size: 12px;
-      margin-top: 15px;
+      margin-top: 5px;
       margin-right: 5px;
       padding: 5px 10px;
     }

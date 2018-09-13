@@ -2,20 +2,14 @@
 import React from 'react';
 import './TagList.scss';
 
-const TagList = ({ tags }) => {
-
-  return (
-    <div className="tag-list">
-      <ul>
-        {
-        tags.map((tag, index) =>
-          <li key={index}>
-            {tag}
-          </li>)
-        }
-      </ul>
-    </div>
-  )
-};
+const TagList = ({ items }) => (
+  <div className="tag-list">
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  </div>
+);
 
 export default TagList;

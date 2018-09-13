@@ -40,52 +40,50 @@ export default class Resume extends Component {
           </Row>
 
           <Row className="mt-5">
-            <Col sm="3">
+            <Col md="3">
               <h2 className="resume__title">
                 work
                 <br />
                 experience
               </h2>
             </Col>
+
             <Col className="mx-auto">
-              <ul />
-              <p>
-                <div className="resume__subtitle">
-                  2009-2017
-                  <br />
-                  CO-FOUNDER AND EDUCATIONAL TECH MANAGER
-                </div>
-                @UNBOX Learning Experience
+              <div className="resume__subtitle">
+                2009-2017
                 <br />
+                CO-FOUNDER AND EDUCATIONAL TECH MANAGER
+              </div>
+              @UNBOX Learning Experience
+              <br />
+              <br />
+              <div className="resume__subtitle">
+                2007-2009
                 <br />
-                <div className="resume__subtitle">
-                  2007-2009
-                  <br />
-                  LEAD WEB/e-LEARNING DEVELOPER
-                </div>
-                @GPAC Comunicação Integrada
+                LEAD WEB/e-LEARNING DEVELOPER
+              </div>
+              @GPAC Comunicação Integrada
+              <br />
+              <br />
+              <div className="resume__subtitle">
+                2005-2007
                 <br />
+                EDUCATIONAL TECH DEVELOPER
+              </div>
+              @HSBC Bank Brasil
+              <br />
+              <br />
+              <div className="resume__subtitle">
+                2001-2005
                 <br />
-                <div className="resume__subtitle">
-                  2005-2007
-                  <br />
-                  EDUCATIONAL TECH DEVELOPER
-                </div>
-                @HSBC Bank Brasil
-                <br />
-                <br />
-                <div className="resume__subtitle">
-                  2001-2005
-                  <br />
-                  WEB/e-LEARNING DEVELOPER
-                </div>
-                @GPAC Comunicação Integrada
-              </p>
+                WEB/e-LEARNING DEVELOPER
+              </div>
+              @GPAC Comunicação Integrada
             </Col>
           </Row>
 
           <Row className="mt-5">
-            <Col sm="3">
+            <Col md="3">
               <h2 className="resume__title">education</h2>
             </Col>
             <Col className="mx-auto">
@@ -120,31 +118,31 @@ export default class Resume extends Component {
           </Row>
 
           <Row className="mt-5">
-            <Col sm="3">
+            <Col md="3">
               <h2 className="resume__title">skills</h2>
             </Col>
 
-            <Col sm={{ size: 9, offset: 0 }}>
+            <Col md={{ size: 9, offset: 0 }}>
               <span className="resume__subtitle">PROGRAMMING/LANGUAGES</span>
               <p>AS3, JS, HTML, CSS, SCSS, PHP, Java, SQL, OOP, UML</p>
             </Col>
 
-            <Col sm={{ size: 9, offset: 3 }}>
+            <Col md={{ size: 9, offset: 3 }}>
               <span className="resume__subtitle">FRAMEWORKS/LIBRARIES</span>
               <p>jQuery, BackboneJS, ReactJS, Bootstrap, GSAP</p>
             </Col>
 
-            <Col sm={{ size: 9, offset: 3 }}>
+            <Col md={{ size: 9, offset: 3 }}>
               <span className="resume__subtitle">SERVER-SIDE/CLOUD</span>
               <p>Linux, LAMP, AWS, EC2</p>
             </Col>
 
-            <Col sm={{ size: 9, offset: 3 }}>
+            <Col md={{ size: 9, offset: 3 }}>
               <span className="resume__subtitle">DEV TOOLS/IDE</span>
               <p>Sublime Text, VS Code, IntelliJ IDEA, STAR UML</p>
             </Col>
 
-            <Col sm={{ size: 9, offset: 3 }}>
+            <Col md={{ size: 9, offset: 3 }}>
               <span className="resume__subtitle">DESIGN TOOLS</span>
               <p>
                 Photoshop, Illustrator, Flash/Animate, Sketch, Gravit Designer,
@@ -152,12 +150,12 @@ export default class Resume extends Component {
               </p>
             </Col>
 
-            <Col sm={{ size: 9, offset: 3 }}>
+            <Col md={{ size: 9, offset: 3 }}>
               <span className="resume__subtitle">VERSION CONTROL</span>
               <p>SVN, GIT (Github, Bitbucket)</p>
             </Col>
 
-            <Col sm={{ size: 9, offset: 3 }}>
+            <Col md={{ size: 9, offset: 3 }}>
               <span className="resume__subtitle">MANAGEMENT</span>
               <p>Trello, Toggl, Microsoft Project, Merlin Project</p>
             </Col>

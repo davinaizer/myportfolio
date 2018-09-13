@@ -17,7 +17,7 @@ $card-border-size: 4px;
 
   &__card {
     height: 100%;
-    min-height: 250px;
+    min-height: 350px;
     padding: 30px;
     width: 100%;
 
@@ -37,11 +37,23 @@ $card-border-size: 4px;
   &__title {
     color: $sizzling-red;
     font-weight: bold;
-    // text-transform: uppercase;
   }
 
   .tag-list {
-    // bottom: 15px;
-    // position: absolute;
+    bottom: 15px;
+    position: absolute;
+  }
+}
+
+// MEDIA QUERIES
+@media (min-width: 576px) {
+  .work-item__card {
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .work-item__card {
+    min-height: auto;
   }
 }

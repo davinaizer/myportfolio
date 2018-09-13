@@ -12,29 +12,18 @@
     margin: 30px 0;
   }
 
-  &__links {
-    margin: 30px 0;
-
-    .btn {
-      margin-right: 30px;
-    }
-  }
-
-  &_gallery {
-    img {
-      margin-bottom: 30px;
-      max-height: 100%;
-      max-width: 100%;
-    }
+  &__gallery {
+    margin: 45px 0;
   }
 
   &__footer {
+    margin: 45px 0;
     hr {
       border: .5px solid $dark-vanilla;
     }
   }
 
   .tag-list {
-    // margin-bottom: 30px;
+    margin-bottom: 30px;
   }
 }

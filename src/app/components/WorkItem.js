@@ -10,14 +10,14 @@ export default class WorkItem extends Component {
   }
 
   render() {
-    const { thumb, title, description, tags, isFlipped, onSelect } = this.props;
+    const { id, thumb, title, summary, tags, isFlipped, onSelect } = this.props;
 
     return (
       <Row noGutters className="work-item">
         <Col md="6">
           <div className="work-item__thumb">
             <a href="#" onClick={onSelect}>
-              <img src={'img/' + thumb} alt={title} />
+              <img src={thumb} alt={title} />
             </a>
           </div>
         </Col>
@@ -28,11 +28,9 @@ export default class WorkItem extends Component {
               'work-item__card ' + (isFlipped && ' work-item__card--flipped')
             }
           >
-            <div className="">
-              <div className="text-lg-left">
-                <p className="work-item__title">{title}</p>
-                <p className="work-item__body small">{description}</p>
-              </div>
+            <div className="text-lg-left">
+              <p className="work-item__title">{title}</p>
+              <p className="work-item__body small">{summary}</p>
             </div>
 
             <Button
@@ -44,7 +42,7 @@ export default class WorkItem extends Component {
               MORE INFO
             </Button>
 
-            <TagList tags={tags} />
+            <TagList items={tags} />
           </div>
         </Col>
       </Row>

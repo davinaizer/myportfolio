@@ -21,7 +21,7 @@ export default class Work extends Component {
 
     this.state = {
       workData: WorkData.data,
-      isOpen: false,
+      isOpen: true,
     };
   }
 
@@ -50,11 +50,11 @@ export default class Work extends Component {
             <hr className="title__separator ml-0" />
           </div>
 
-          <WorkList data={this.state.workData} onSelect={this.openModal} />
+          <WorkList items={this.state.workData} onSelect={this.openModal} />
         </Container>
 
         <Modal show={this.state.isOpen} onClose={this.closeModal}>
-          <WorkInfo />
+          <WorkInfo data={this.state.workData[0]} />
         </Modal>
       </section>
     );

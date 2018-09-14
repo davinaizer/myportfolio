@@ -8,7 +8,7 @@ import WorkList from '../components/WorkList';
 // ASSETS
 import './Work.scss';
 
-// change to data pulled from DB
+//TODO: move data to DB
 const WorkData = require('./Work.json').data;
 
 export default class Work extends Component {

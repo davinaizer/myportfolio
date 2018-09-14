@@ -7,10 +7,9 @@ import WorkList from '../components/WorkList';
 
 // ASSETS
 import './Work.scss';
-import '../img/work-bg.jpg';
 
 // change to data pulled from DB
-const WorkData = require('./Work.json');
+const WorkData = require('./Work.json').data;
 
 export default class Work extends Component {
   constructor(props) {
@@ -20,16 +19,18 @@ export default class Work extends Component {
     this.closeModal = this.closeModal.bind(this);
 
     this.state = {
-      workData: WorkData.data,
-      isOpen: true,
+      currentId: 0,
+      isOpen: false,
+
     };
   }
 
-  openModal(evt) {
+  openModal(evt, id) {
     evt.preventDefault();
 
     document.body.classList.add('modal-open');
     this.setState(prevState => ({
+      currentId: +id,
       isOpen: true,
     }));
   }
@@ -50,11 +51,11 @@ export default class Work extends Component {
             <hr className="title__separator ml-0" />
           </div>
 
-          <WorkList items={this.state.workData} onSelect={this.openModal} />
+          <WorkList items={WorkData} onSelect={this.openModal} />
         </Container>
 
         <Modal show={this.state.isOpen} onClose={this.closeModal}>
-          <WorkInfo data={this.state.workData[0]} />
+          <WorkInfo data={WorkData[this.state.currentId]} />
         </Modal>
       </section>
     );

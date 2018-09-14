@@ -16,7 +16,7 @@ export default class WorkItem extends Component {
       <Row noGutters className="work-item">
         <Col md="6">
           <div className="work-item__thumb">
-            <a href="#" onClick={onSelect}>
+            <a href="#" onClick={(evt) => onSelect(evt, id)}>
               <img src={thumb} alt={title} />
             </a>
           </div>
@@ -37,7 +37,7 @@ export default class WorkItem extends Component {
               className="work-item__btn"
               size="sm"
               color="secondary"
-              onClick={onSelect}
+              onClick={(evt) => onSelect(evt, id)}
             >
               MORE INFO
             </Button>

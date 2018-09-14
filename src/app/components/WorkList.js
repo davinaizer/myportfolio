@@ -2,9 +2,6 @@
 import React from 'react';
 import WorkItem from './WorkItem';
 
-// import all images from img folder
-require.context('../img/works/', true, /\.(png|jp(e*)g|svg)$/);
-
 const WorkList = ({ items, onSelect }) => {
   const workList = items.map((item, index) => (
     <WorkItem

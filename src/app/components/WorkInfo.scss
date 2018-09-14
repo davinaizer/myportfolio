@@ -19,11 +19,54 @@
   &__footer {
     margin: 45px 0;
     hr {
-      border: .5px solid $dark-vanilla;
+      border: 0.5px solid $dark-vanilla;
     }
   }
 
   .tag-list {
     margin-bottom: 30px;
+  }
+}
+
+.carousel {
+  &-indicators {
+    bottom: -40px;
+
+    li {
+      background-color: $white;
+      transition: 0.5s;
+      width: 25px;
+    }
+
+    .active {
+      background-color: $sizzling-red;
+    }
+  }
+
+  &-control-next {
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    transition: 0.5s;
+    width: 10%;
+
+    &-icon {
+      height: 50px;
+    }
+  }
+
+  &-control-prev {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    transition: 0.5s;
+    width: 10%;
+
+    &-icon {
+    }
   }
 }

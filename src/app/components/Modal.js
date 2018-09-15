@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Button} from 'reactstrap';
+import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 
 import './Modal.scss';
 
@@ -25,11 +25,7 @@ export default class Modal extends Component {
   }
 
   render() {
-    const {
-      show,
-      onClose,
-      children
-    } = this.props;
+    const { show, onClose, children } = this.props;
 
     if (!show) {
       return null;
@@ -41,6 +37,13 @@ export default class Modal extends Component {
           Close
         </Button>
         {children}
+
+        <div className="app-modal__footer">
+          <hr />
+          <Button color="primary" onClick={onClose}>
+            Close
+          </Button>
+        </div>
       </div>
     );
   }

@@ -37,10 +37,6 @@ export default class WorkInfo extends Component {
         </div>
 
         <LinkList className="work-info__links" items={links} />
-
-        <div className="work-info__footer">
-          <hr />
-        </div>
       </Container>
     );
   }

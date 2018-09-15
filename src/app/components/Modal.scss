@@ -14,4 +14,14 @@
     top: 30px;
     right: 30px;
   }
+
+  &__footer {
+    margin: 30px auto;
+    text-align: center;
+    width: 90%;
+
+    hr {
+      border: 0.5px solid $dark-vanilla;
+    }
+  }
 }

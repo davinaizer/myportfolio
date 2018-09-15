@@ -139,7 +139,7 @@ export default class Resume extends Component {
 
             <Col md={{ size: 9, offset: 3 }}>
               <span className="resume__subtitle">DEV TOOLS/IDE</span>
-              <p>Sublime Text, VS Code, IntelliJ IDEA, STAR UML</p>
+              <p>Sublime Text, VS Code, IntelliJ IDEA</p>
             </Col>
 
             <Col md={{ size: 9, offset: 3 }}>
@@ -147,6 +147,13 @@ export default class Resume extends Component {
               <p>
                 Photoshop, Illustrator, Flash/Animate, Sketch, Gravit Designer,
                 Inkscape
+              </p>
+            </Col>
+
+            <Col md={{ size: 9, offset: 3 }}>
+              <span className="resume__subtitle">E-LEARNING TOOLS</span>
+              <p>
+                Adobe Captivate, Articulate Storyline, Moodle LMS
               </p>
             </Col>
 

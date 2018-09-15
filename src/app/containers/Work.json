@@ -20,7 +20,7 @@
           "url": "http://davinaizer.atwebpages.com/ebookas/"
         },
         {
-          "label": "Use Case",
+          "label": "Live Demo",
           "url": "http://davinaizer.atwebpages.com/proj_432_15_financas_pessoais/"
         },
         {
@@ -70,15 +70,7 @@
           "url": "http://davinaizer.atwebpages.com/proj_435_15_up_gestaodotempo/"
         },
         {
-          "label": "Live Demo 2",
-          "url": "http://davinaizer.atwebpages.com/proj_435_15_up_gestaodotempo/"
-        },
-        {
           "label": "Live Demo 3",
-          "url": "http://davinaizer.atwebpages.com/proj_501_16.3_treinamento_multiplicadores/"
-        },
-        {
-          "label": "Live Demo 4",
           "url": "http://davinaizer.atwebpages.com/proj_433_15_up_apresentacoes/"
         },
         {
@@ -99,7 +91,7 @@
     },
     {
       "id": 2,
-      "title": "UNBOX Website",
+      "title": "Website // UNBOX",
       "summary": "A single page website built using Bootstrap as CSS Framework, RequireJS, jQuery and Gulp as task runner.",
       "description": "A single page website built using Bootstrap as CSS Framework, RequireJS, jQuery and Gulp as task runner.",
       "images": {
@@ -152,11 +144,7 @@
       },
       "links": [
         {
-          "label": "Live Preview",
-          "url": "http://davinaizer.atwebpages.com/myportfolio/"
-        },
-        {
-          "label": "Git",
+          "label": "Project Repo",
           "url": "https://github.com/davinaizer/myportfolio"
         }
       ],

@@ -14,8 +14,8 @@ const HtmlPlugin = new HtmlWebPackPlugin({
   filename: './index.html',
 });
 const MiniCssPlugin = new MiniCssExtractPlugin({
-  filename: isDevMode ? '[name].css' : '[name].[hash].css',
-  chunkFilename: isDevMode ? '[id].css' : '[id].[hash].css',
+  filename: '[name].css',
+  chunkFilename: '[id].css',
 });
 
 // WEBPACK CONF
@@ -87,9 +87,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              name: isDevMode
-                ? 'img/[name].[ext]'
-                : 'img/[hash]-[name].[ext]',
+              name: 'img/[name].[ext]',
             },
           },
         ],

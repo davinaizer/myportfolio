@@ -1,3 +1,5 @@
+//TODO: Add CSS minimizer
+
 // IMPORTS
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -14,8 +16,8 @@ const HtmlPlugin = new HtmlWebPackPlugin({
   filename: './index.html',
 });
 const MiniCssPlugin = new MiniCssExtractPlugin({
-  filename: '[name].css',
-  chunkFilename: '[id].css',
+  filename: 'styles/[name].css',
+  chunkFilename: 'styles/[id].css',
 });
 
 // WEBPACK CONF
@@ -23,7 +25,21 @@ module.exports = {
   entry: './src/app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/index.js',
+    filename: 'scripts/[name].bundle.js',
+    chunkFilename: 'scripts/[name].bundle.js',
+    publicPath: '',
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /node_modules/,
+          chunks: 'initial',
+          name: 'vendor',
+          enforce: true,
+        },
+      },
+    },
   },
   devtool: 'eval-source-map',
   resolve: {
@@ -38,7 +54,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {loader: 'babel-loader'},
+        use: { loader: 'babel-loader' },
       },
 
       {
@@ -46,11 +62,10 @@ module.exports = {
         use: [
           {
             loader: 'html-loader',
-            options: {minimize: true},
+            options: { minimize: true },
           },
         ],
       },
-
       {
         test: /\.s[ac]ss$/,
         use: [
@@ -58,7 +73,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: true,
+              url: false,
               sourceMap: isDevMode,
             },
           },
@@ -74,7 +89,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               data: '@import "app/styles/_theme.scss";',
-              includePaths:[__dirname, 'src'],
+              includePaths: [__dirname, 'src'],
               sourceMap: isDevMode,
             },
           },

@@ -1,0 +1,14 @@
+.btn {
+  font-weight: bold;
+
+  &-primary {
+    background-color: transparent;
+    color: $sizzling-red; // border: 2px solid $dark-vanilla;
+  }
+
+  &-secondary {
+    background-color: transparent;
+    border: 1px solid $dark-vanilla;
+    color: $dark-vanilla;
+  }
+}

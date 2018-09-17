@@ -1,0 +1,20 @@
+.resume-section {
+  background-attachment: scroll;
+  background-color: $gunmetal;
+  background-image: url('../img/resume-bg.jpg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  min-height: 600px;
+}
+
+.resume__title {
+  color: $sizzling-red;
+  font-weight: bold;
+}
+
+.resume__subtitle {
+  color: $white;
+  font-weight: bold;
+}

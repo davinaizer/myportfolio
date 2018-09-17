@@ -1,0 +1,64 @@
+.section
+  - title
+    - hr
+  - subtitle
+  - body text (p)
+  - button
+
+menu
+  - item
+    - active
+    - selected
+
+project
+  - item
+    - title
+    - img
+    - text (p)
+    - tags (bg)
+  - card
+    - left
+    - right
+
+__________________________________________
+
+.navbar__item
+.navbar__item--active
+.navbar__item--selected
+
+.section--right
+.section__title
+.section__title--inverse
+.section__subtitle
+.section__text
+
+.section__button
+.section__button--inverse
+
+.title == .section__title
+.title__separator
+
+.card
+
+.work-item == .card
+.work-item--flipped
+.work-item__title
+.work-item__body == (p)
+.work-item__img
+.work-item__tag
+
+.resume__title
+.resume__subtitle
+
+.timeline (draw line)
+.timeline__bullet
+.timeline__date
+.timeline__title == .section__subtitle
+.timeline__subtitle == p.toUpperCase
+.timeline__body == (p)
+
+.contact__icon
+.contact__icon--hover
+
+.footer__hr
+.footer__body == p.small

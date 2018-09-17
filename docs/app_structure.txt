@@ -1,0 +1,32 @@
+@author Davi Naizer
+@date 08/28/2018
+
+App Structure
+
+- App
+  - Navbar
+  - About
+    - Text
+    - Image
+    - Button (Start)
+  - Projects
+    - Project Item
+      - Title
+      - Cover Image
+      - Description
+  - Curriculum
+    - Resume
+      - Text
+    - Education
+      - Text
+    - Work Experiences
+      - Vertical Timeline
+        - Title
+        - Date
+        - Description
+    - Skills
+      - List
+  - Contact
+    - Email
+    - GitHub
+    - LinkedIn

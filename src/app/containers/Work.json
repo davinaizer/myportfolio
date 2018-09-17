@@ -34,7 +34,7 @@
       "id": 1,
       "title": "E-book Framework JS",
       "summary": "In 2014 the AS3 version of the framework was fully redesigned in HTML and JS using BackboneJS and Babel. Due to the nature of JS and HTML, the project had a simpler architecture compared to the original made in AS3.",
-      "description": "In 2014 the AS3 version of the framework was fully redesigned in HTML and JS using BackboneJS and Babel. Due to the nature of JS and HTML, the project had a simpler architecture compared to the original made in AS3.<br\/><br\/>This new version of the framework had a different approach and concept. It was designed to replace the AS3 version and to be compatible with all devices, not only desktop like the previous. To ease the transition from AS3 and build a responsive version we adopted Bootstrap as the CSS framework and BackboneJS to keep a similar architecture (MVC).",
+      "description": "In 2014 the AS3 version of the framework was fully redesigned in HTML and JS using BackboneJS and Babel. Due to the nature of JS and HTML, the project had a simpler architecture compared to the original made in AS3.<br\/><br\/>This new version of the framework had a different approach and concept. It was designed to replace the AS3 version and to be compatible with all devices, not only desktop like the previous. To ease the transition from AS3 and build a responsive version we adopted Bootstrap as the CSS framework, Hanbldebars for HTML templating and BackboneJS to keep a similar architecture (MVC).",
       "images": {
         "thumb": "img/ebookjs_thumb.jpg",
         "gallery": [

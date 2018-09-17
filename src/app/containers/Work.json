@@ -17,7 +17,7 @@
       "links": [
         {
           "label": "Live Preview",
-          "url": "http://davinaizer.atwebpages.com/ebookas/"
+          "url": "http://davinaizer.atwebpages.com/ebook-as3/"
         },
         {
           "label": "Live Demo",
@@ -25,7 +25,7 @@
         },
         {
           "label": "Project Repo - GIT",
-          "url": "https://github.com/davinaizer/ebookas"
+          "url": "https://github.com/davinaizer/ebook-as3"
         }
       ],
       "tags": ["AS3", "SASS", "JSFL", "GSAP", "SCORM", "OOP", "MVCS"]
@@ -55,11 +55,11 @@
       "links": [
         {
           "label": "Project Repo - GIT",
-          "url": "https://github.com/davinaizer/ebookjs_fluid"
+          "url": "https://github.com/davinaizer/ebook-js"
         },
         {
           "label": "Live Preview",
-          "url": "http://davinaizer.atwebpages.com/ebookjs/"
+          "url": "http://davinaizer.atwebpages.com/ebook-js/"
         },
         {
           "label": "Live Demo 1",

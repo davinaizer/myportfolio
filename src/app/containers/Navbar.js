@@ -39,7 +39,7 @@ export default class TopNav extends Component {
     return (
       <div>
         <Navbar className="app-navbar" fixed="top" expand="md">
-          <NavbarBrand href="/#">
+          <NavbarBrand href="#">
             <img src={brandImg} width="40" height="40" alt="Home" />
           </NavbarBrand>
 
@@ -47,16 +47,16 @@ export default class TopNav extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav onClick={this.close} className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/#about">About</NavLink>
+                <NavLink href="#about">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#work">Work</NavLink>
+                <NavLink href="#work">Work</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#resume">Resume</NavLink>
+                <NavLink href="#resume">Resume</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/#contact">Contact</NavLink>
+                <NavLink href="#contact">Contact</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

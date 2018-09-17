@@ -17,7 +17,7 @@
       "links": [
         {
           "label": "Live Preview",
-          "url": "http://davinaizer.atwebpages.com/ebook-as/"
+          "url": "http://davinaizer.atwebpages.com/ebook-as3/"
         },
         {
           "label": "Live Demo",
@@ -25,7 +25,7 @@
         },
         {
           "label": "Project Repo - GIT",
-          "url": "https://github.com/davinaizer/ebook-as"
+          "url": "https://github.com/davinaizer/ebook-as3"
         }
       ],
       "tags": ["AS3", "SASS", "JSFL", "GSAP", "SCORM", "OOP", "MVCS"]

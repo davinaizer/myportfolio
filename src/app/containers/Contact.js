@@ -39,7 +39,7 @@ export default class Contact extends Component {
               />
               <SocialIcon
                 icon={icon2}
-                href={'https://www.linkedin.com/in/davi-olcha-naizer-23b84b20'}
+                href={'https://www.linkedin.com/in/davi-naizer'}
               />
               <SocialIcon icon={icon3} href={'https://github.com/davinaizer'} />
             </Col>

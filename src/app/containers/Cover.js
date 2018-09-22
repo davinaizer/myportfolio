@@ -17,9 +17,9 @@ export default class Cover extends Component {
               <h1 className="mb-2">DAVI NAIZER</h1>
               <hr className="title__separator ml-0" />
               <h2 className="mx-auto my-5">
-                Educational Tech Specialist
-                <br />
                 Front-end Web Developer
+                <br />
+                E-Learning Developer
               </h2>
               <p className="mb-5">
                 Hello. Iʼm Davi, a problem solver who loves helping people come

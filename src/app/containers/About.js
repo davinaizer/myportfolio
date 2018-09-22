@@ -17,7 +17,7 @@ export default class About extends Component {
               <h2 className="section__title text-right">About</h2>
               <hr className="title__separator mr-0" />
               <p className="text-justify">
-                I’m a simple man who enjoys simple things of life. A good coffee
+                I’m a simple person who enjoys simple things of life. A good coffee
                 and a good music, and it’s all set to work. If I’m not coding,
                 studying or researching better ways to work, I’m cooking,
                 preparing a espresso or spending free time with my wife and

@@ -1,5 +1,4 @@
 # myportfolio
-Davi Naizer's Portfolio.
 
 A simple website built from scratch (no boilerplates, for the purpose of learning) using Webpack 4, ES6, ReactJS, SCSS, and Bootstrap 4. 
 

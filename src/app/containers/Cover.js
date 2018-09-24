@@ -42,7 +42,7 @@ export default class Cover extends Component {
                 E-Learning Developer
               </h2>
               <p className="mb-5">
-                Hello. Iʼm Davi, a problem solver who loves helping people come
+                Hi. Iʼm Davi, a problem solver who loves helping people come
                 up with new ideas and solutions.
               </p>
               <a href="#about" onClick={evt => onSelect(evt)}>

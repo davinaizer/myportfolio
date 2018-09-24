@@ -1,23 +1,41 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'reactstrap';
+import TweenLite from 'gsap/TweenLite';
+import Expo from 'gsap';
+import 'gsap/CSSPlugin';
 
 import '../containers/About.scss';
 
 export default class About extends Component {
   constructor(props) {
     super(props);
+    this.sectionRef = React.createRef();
+  }
+
+  componentDidMount() {
+    TweenLite.from(this.sectionRef.current, 1, {
+      opacity: 0,
+      ease: Expo.easeInOut,
+    });
+  }
+
+  componentWillUnmount() {
+    TweenLite.to(this.sectionRef.current, 1, {
+      opacity: 0,
+      ease: Expo.easeInOut,
+    });
   }
 
   render() {
     return (
-      <section id="about" className="about-section">
+      <section id="about" className="about-section" ref={this.sectionRef}>
         <Container>
           <Row className="justify-content-end">
             <Col md="6">
               <h2 className="section__title text-right">About</h2>
               <hr className="title__separator mr-0" />
               <p className="text-justify">
-                I’m a simple man who enjoys simple things of life. A good coffee
+                I’m a simple person who enjoys simple things of life. A good coffee
                 and a good music, and it’s all set to work. If I’m not coding,
                 studying or researching better ways to work, I’m cooking,
                 preparing a espresso or spending free time with my wife and

@@ -2,9 +2,11 @@
   background-attachment: scroll;
   background-color: $gunmetal;
   background-image: url('../img/contact-bg.jpg');
-  background-position: right top;
+  background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
 
-  min-height: 700px;
+  height: auto;
+  min-height: 100vh;
+  padding: 10rem 0;
 }

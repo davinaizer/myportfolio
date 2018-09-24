@@ -1,6 +1,4 @@
 .masthead {
-  @include box_shadow(3);
-
   background-attachment: scroll;
   background-image: url('../img/cover-bg.jpg');
   background-position: center bottom;
@@ -13,7 +11,6 @@
   position: relative;
   width: 100%;
 }
-
 
 .cover__btn {
   padding: 15px 30px;

@@ -1,16 +1,34 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import TweenLite from 'gsap/TweenLite';
+import Expo from 'gsap';
+import 'gsap/CSSPlugin';
 
 import '../containers/Resume.scss';
 
 export default class Resume extends Component {
   constructor(props) {
     super(props);
+    this.sectionRef = React.createRef();
+  }
+
+  componentDidMount() {
+    TweenLite.from(this.sectionRef.current, 1, {
+      opacity: 0,
+      ease: Expo.easeInOut,
+    });
+  }
+
+  componentWillUnmount() {
+    TweenLite.to(this.sectionRef.current, 1, {
+      opacity: 0,
+      ease: Expo.easeInOut,
+    });
   }
 
   render() {
     return (
-      <section id="resume" className="resume-section">
+      <section id="resume" className="resume-section" ref={this.sectionRef}>
         <Container className="">
           <Row>
             <Col lg="8" className="">
@@ -41,49 +59,6 @@ export default class Resume extends Component {
 
           <Row className="mt-5">
             <Col md="3">
-              <h2 className="resume__title">
-                work
-                <br />
-                experience
-              </h2>
-            </Col>
-
-            <Col className="mx-auto">
-              <div className="resume__subtitle">
-                2009-2017
-                <br />
-                CO-FOUNDER AND EDUCATIONAL TECH MANAGER
-              </div>
-              @UNBOX Learning Experience
-              <br />
-              <br />
-              <div className="resume__subtitle">
-                2007-2009
-                <br />
-                LEAD WEB/e-LEARNING DEVELOPER
-              </div>
-              @GPAC Comunicação Integrada
-              <br />
-              <br />
-              <div className="resume__subtitle">
-                2005-2007
-                <br />
-                EDUCATIONAL TECH DEVELOPER
-              </div>
-              @HSBC Bank Brasil
-              <br />
-              <br />
-              <div className="resume__subtitle">
-                2001-2005
-                <br />
-                WEB/e-LEARNING DEVELOPER
-              </div>
-              @GPAC Comunicação Integrada
-            </Col>
-          </Row>
-
-          <Row className="mt-5">
-            <Col md="3">
               <h2 className="resume__title">education</h2>
             </Col>
             <Col className="mx-auto">
@@ -94,7 +69,7 @@ export default class Resume extends Component {
                   COMPUTER ENGINEERING
                 </span>
                 <br />
-                @Universidade Positivo, Curitiba-PR
+                Universidade Positivo, Curitiba-PR
               </p>
               <p>
                 <span className="resume__subtitle">
@@ -103,7 +78,7 @@ export default class Resume extends Component {
                   ELECTRICAL ENGINEERING
                 </span>
                 <br />
-                @Universidade Positivo, Curitiba-PR
+                Universidade Positivo, Curitiba-PR
               </p>
               <p>
                 <span className="resume__subtitle">
@@ -112,8 +87,57 @@ export default class Resume extends Component {
                   ELECTRONICS
                 </span>
                 <br />
-                @Federal University of Technology - Paraná (UTFPR)
+                Federal University of Technology - Paraná (UTFPR)
               </p>
+            </Col>
+          </Row>
+
+          <Row className="mt-5">
+            <Col md="3">
+              <h2 className="resume__title">
+                work
+                <br />
+                experience
+              </h2>
+            </Col>
+
+            <Col className="mx-auto">
+              <div className="resume__subtitle">
+                2017-Present
+                <br />
+                FREELANCE FRONT-END DEVELOPER
+              </div>
+              <br />
+              <div className="resume__subtitle">
+                2009-2017
+                <br />
+                CO-FOUNDER & DEVELOPMENT MANAGER
+              </div>
+              UNBOX Learning Experience
+              <br />
+              <br />
+              <div className="resume__subtitle">
+                2007-2009
+                <br />
+                LEAD WEB DEVELOPER
+              </div>
+              GPAC Comunicação Integrada
+              <br />
+              <br />
+              <div className="resume__subtitle">
+                2005-2007
+                <br />
+                E-LEARNING DEVELOPER
+              </div>
+              HSBC Bank Brasil
+              <br />
+              <br />
+              <div className="resume__subtitle">
+                2001-2005
+                <br />
+                WEB/ACTIONSCRIPT DEVELOPER
+              </div>
+              GPAC Comunicação Integrada
             </Col>
           </Row>
 
@@ -152,9 +176,7 @@ export default class Resume extends Component {
 
             <Col md={{ size: 9, offset: 3 }}>
               <span className="resume__subtitle">E-LEARNING TOOLS</span>
-              <p>
-                Adobe Captivate, Articulate Storyline, Moodle LMS
-              </p>
+              <p>Adobe Captivate, Articulate Storyline, Moodle LMS</p>
             </Col>
 
             <Col md={{ size: 9, offset: 3 }}>

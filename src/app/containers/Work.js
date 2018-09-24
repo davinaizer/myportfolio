@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
+import TweenLite from 'gsap/TweenLite';
+import Expo from 'gsap';
+import 'gsap/CSSPlugin';
 
 import Modal from '../components/Modal';
 import WorkInfo from '../components/WorkInfo';
@@ -15,14 +18,28 @@ export default class Work extends Component {
   constructor(props) {
     super(props);
 
+    this.sectionRef = React.createRef();
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
 
     this.state = {
       currentId: 0,
       isOpen: false,
-
     };
+  }
+
+  componentDidMount() {
+    TweenLite.from(this.sectionRef.current, 1, {
+      opacity: 0,
+      ease: Expo.easeInOut,
+    });
+  }
+
+  componentWillUnmount() {
+    TweenLite.to(this.sectionRef.current, 1, {
+      opacity: 0,
+      ease: Expo.easeInOut,
+    });
   }
 
   openModal(evt, id) {
@@ -44,7 +61,7 @@ export default class Work extends Component {
 
   render() {
     return (
-      <section id="work" className="work-section">
+      <section id="work" className="work-section" ref={this.sectionRef}>
         <Container>
           <div className="mb-5">
             <h2 className="section__title">Work</h2>

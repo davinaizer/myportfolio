@@ -59,49 +59,6 @@ export default class Resume extends Component {
 
           <Row className="mt-5">
             <Col md="3">
-              <h2 className="resume__title">
-                work
-                <br />
-                experience
-              </h2>
-            </Col>
-
-            <Col className="mx-auto">
-              <div className="resume__subtitle">
-                2009-2017
-                <br />
-                CO-FOUNDER AND EDUCATIONAL TECH MANAGER
-              </div>
-              @UNBOX Learning Experience
-              <br />
-              <br />
-              <div className="resume__subtitle">
-                2007-2009
-                <br />
-                LEAD WEB/e-LEARNING DEVELOPER
-              </div>
-              @GPAC Comunicação Integrada
-              <br />
-              <br />
-              <div className="resume__subtitle">
-                2005-2007
-                <br />
-                EDUCATIONAL TECH DEVELOPER
-              </div>
-              @HSBC Bank Brasil
-              <br />
-              <br />
-              <div className="resume__subtitle">
-                2001-2005
-                <br />
-                WEB/e-LEARNING DEVELOPER
-              </div>
-              @GPAC Comunicação Integrada
-            </Col>
-          </Row>
-
-          <Row className="mt-5">
-            <Col md="3">
               <h2 className="resume__title">education</h2>
             </Col>
             <Col className="mx-auto">
@@ -112,7 +69,7 @@ export default class Resume extends Component {
                   COMPUTER ENGINEERING
                 </span>
                 <br />
-                @Universidade Positivo, Curitiba-PR
+                Universidade Positivo, Curitiba-PR
               </p>
               <p>
                 <span className="resume__subtitle">
@@ -121,7 +78,7 @@ export default class Resume extends Component {
                   ELECTRICAL ENGINEERING
                 </span>
                 <br />
-                @Universidade Positivo, Curitiba-PR
+                Universidade Positivo, Curitiba-PR
               </p>
               <p>
                 <span className="resume__subtitle">
@@ -130,8 +87,57 @@ export default class Resume extends Component {
                   ELECTRONICS
                 </span>
                 <br />
-                @Federal University of Technology - Paraná (UTFPR)
+                Federal University of Technology - Paraná (UTFPR)
               </p>
+            </Col>
+          </Row>
+
+          <Row className="mt-5">
+            <Col md="3">
+              <h2 className="resume__title">
+                work
+                <br />
+                experience
+              </h2>
+            </Col>
+
+            <Col className="mx-auto">
+              <div className="resume__subtitle">
+                2017-Present
+                <br />
+                FREELANCE FRONT-END DEVELOPER
+              </div>
+              <br />
+              <div className="resume__subtitle">
+                2009-2017
+                <br />
+                CO-FOUNDER & DEVELOPMENT MANAGER
+              </div>
+              UNBOX Learning Experience
+              <br />
+              <br />
+              <div className="resume__subtitle">
+                2007-2009
+                <br />
+                LEAD WEB DEVELOPER
+              </div>
+              GPAC Comunicação Integrada
+              <br />
+              <br />
+              <div className="resume__subtitle">
+                2005-2007
+                <br />
+                E-LEARNING DEVELOPER
+              </div>
+              HSBC Bank Brasil
+              <br />
+              <br />
+              <div className="resume__subtitle">
+                2001-2005
+                <br />
+                WEB/ACTIONSCRIPT DEVELOPER
+              </div>
+              GPAC Comunicação Integrada
             </Col>
           </Row>
 

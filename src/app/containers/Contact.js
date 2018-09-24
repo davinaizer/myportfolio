@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import TweenLite from 'gsap/TweenLite';
+import Expo from 'gsap';
+import 'gsap/CSSPlugin';
 
 import '../containers/Contact.scss';
 
@@ -13,11 +16,26 @@ import SocialIcon from '../components/SocialIcon';
 export default class Contact extends Component {
   constructor(props) {
     super(props);
+    this.sectionRef = React.createRef();
+  }
+
+  componentDidMount() {
+    TweenLite.from(this.sectionRef.current, 1, {
+      opacity: 0,
+      ease: Expo.easeInOut,
+    });
+  }
+
+  componentWillUnmount() {
+    TweenLite.to(this.sectionRef.current, 1, {
+      opacity: 0,
+      ease: Expo.easeInOut,
+    });
   }
 
   render() {
     return (
-      <section id="contact" className="contact-section">
+      <section id="contact" className="contact-section" ref={this.sectionRef}>
         <Container>
           <Row>
             <Col lg="8" className="">

@@ -1,16 +1,34 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import TweenLite from 'gsap/TweenLite';
+import Expo from 'gsap';
+import 'gsap/CSSPlugin';
 
 import '../containers/Resume.scss';
 
 export default class Resume extends Component {
   constructor(props) {
     super(props);
+    this.sectionRef = React.createRef();
+  }
+
+  componentDidMount() {
+    TweenLite.from(this.sectionRef.current, 1, {
+      opacity: 0,
+      ease: Expo.easeInOut,
+    });
+  }
+
+  componentWillUnmount() {
+    TweenLite.to(this.sectionRef.current, 1, {
+      opacity: 0,
+      ease: Expo.easeInOut,
+    });
   }
 
   render() {
     return (
-      <section id="resume" className="resume-section">
+      <section id="resume" className="resume-section" ref={this.sectionRef}>
         <Container className="">
           <Row>
             <Col lg="8" className="">
@@ -152,9 +170,7 @@ export default class Resume extends Component {
 
             <Col md={{ size: 9, offset: 3 }}>
               <span className="resume__subtitle">E-LEARNING TOOLS</span>
-              <p>
-                Adobe Captivate, Articulate Storyline, Moodle LMS
-              </p>
+              <p>Adobe Captivate, Articulate Storyline, Moodle LMS</p>
             </Col>
 
             <Col md={{ size: 9, offset: 3 }}>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Container, Row, Col, Button } from 'reactstrap';
+
 import TweenLite from 'gsap/TweenLite';
 import Expo from 'gsap';
 import 'gsap/CSSPlugin';
@@ -57,3 +59,7 @@ export default class Cover extends Component {
     );
   }
 }
+
+Cover.propTypes = {
+  onSelect: PropTypes.func,
+};

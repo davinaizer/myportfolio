@@ -1,6 +1,7 @@
 // FSC
 import React from 'react';
 import { Button } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 import './LinkList.scss';
 
@@ -15,3 +16,8 @@ const LinkList = ({ items }) => (
 );
 
 export default LinkList;
+
+LinkList.propTypes = {
+  items: PropTypes.array
+};
+

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   Collapse,
   Navbar,
@@ -75,3 +76,7 @@ export default class TopNav extends Component {
     );
   }
 }
+
+TopNav.propTypes = {
+  onSelect: PropTypes.func,
+};

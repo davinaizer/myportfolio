@@ -5,10 +5,10 @@ import App from './App';
 
 // IMAGE BULK LOAD
 var cache = {};
-function importAll (r) {
-  r.keys().forEach(key => cache[key] = r(key));
+function importAll(r) {
+  r.keys().forEach(key => (cache[key] = r(key)));
 }
-importAll(require.context('./img/', true, /\.(png|jp(e*)g|svg)$/i));
+importAll(require.context('./img/', true, /\.(ico|png|jp(e*)g|svg)$/));
 // -----------
 
 ReactDOM.render(<App />, document.getElementById('app'));

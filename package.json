@@ -5,7 +5,9 @@
   "main": "src/app/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --hot --inline --open --mode development",
-    "build": "cross-env NODE_ENV=production webpack --mode production"
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "clean": "rimraf dist && git worktree prune",
+    "deploy": "npm run clean && git worktree add dist gh-pages && npm run build && git -C ./dist add --all && git -C ./dist commit -m 'Deploy to gh-pages' && git -C ./dist push origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "@babel/core": "^7.0.1",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "aos": "^2.3.3",
     "autoprefixer": "^9.1.5",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
@@ -41,6 +44,7 @@
     "gsap": "^2.0.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "imagemin-webpack-plugin": "^2.3.0",
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
     "postcss-loader": "^3.0.0",

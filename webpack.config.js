@@ -5,6 +5,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 
 // VARS DEF
 const isDevMode = process.env.NODE_ENV !== 'production';
@@ -18,6 +19,13 @@ const HtmlPlugin = new HtmlWebPackPlugin({
 const MiniCssPlugin = new MiniCssExtractPlugin({
   filename: 'styles/[name].css',
   chunkFilename: 'styles/[id].css',
+});
+const ImageminPlugin = new ImageminWebpackPlugin({
+  disable: isDevMode,
+  pngquant: {
+    quality: '90-100',
+  },
+  test: /\.(png|jpg|gif)$/,
 });
 
 // WEBPACK CONF
@@ -96,12 +104,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jp(e*)g|svg)$/,
+        test: /\.(ico|png|jp(e*)g|svg)$/,
         use: [
           {
             loader: 'url-loader',
             options: {
-              limit: 8192,
+              limit: 7168,
               name: 'img/[name].[ext]',
             },
           },
@@ -110,5 +118,5 @@ module.exports = {
     ],
   },
 
-  plugins: [CleanPlugin, HtmlPlugin, MiniCssPlugin],
+  plugins: [CleanPlugin, HtmlPlugin, MiniCssPlugin, ImageminPlugin],
 };

@@ -40,8 +40,8 @@ export default class Resume extends Component {
           <Row className="text-justify">
             <Col xs="12" sm="6" className="">
               <p>
-                I've been creating web and learning content for almost 18 years
-                now. I worked on many projects over these years along big
+                I&#x27;ve been creating web and learning content for almost 18
+                years now. I worked on many projects over these years along big
                 companies like Kraft Foods Brasil, Electrolux Sweden, Volvo
                 Motors, HSBC Bank, Furukawa Electric, GP Strategies, Metlife
                 Brasil, O Boticário and many others.
@@ -49,10 +49,10 @@ export default class Resume extends Component {
             </Col>
             <Col xs="12" sm="6" className="">
               <p>
-                As a tech enthusiast and an eager learner, I'm always looking
-                for new tools and ways to improve mine and team's quality of
-                life. If I need to learn something new, no problem, just give
-                some time and I will do my best.
+                As a tech enthusiast and an eager learner, I&#x27;m always
+                looking for new tools and ways to improve mine and team&#x27;s
+                quality of life. If I need to learn something new, no problem,
+                just give some time and I will do my best.
               </p>
             </Col>
           </Row>

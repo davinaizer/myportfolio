@@ -46,7 +46,7 @@ export default class Work extends Component {
     evt.preventDefault();
 
     document.body.classList.add('modal-open');
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       currentId: +id,
       isOpen: true,
     }));

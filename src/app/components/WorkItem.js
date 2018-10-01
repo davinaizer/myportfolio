@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Row, Col } from 'reactstrap';
+import AOS from 'aos';
 
 import './WorkItem.scss';
 import TagList from './TagList';
@@ -7,16 +8,23 @@ import TagList from './TagList';
 export default class WorkItem extends Component {
   constructor(props) {
     super(props);
+
+    AOS.init();
   }
 
   render() {
     const { id, thumb, title, summary, tags, isFlipped, onSelect } = this.props;
 
     return (
-      <Row noGutters className="work-item">
+      <Row
+        noGutters
+        className="work-item"
+        data-aos={'fade-' + (isFlipped ? 'left' : 'right')}
+        data-aos-anchor-placement="bottom-bottom"
+      >
         <Col md="6">
           <div className="work-item__thumb">
-            <a href="#" onClick={(evt) => onSelect(evt, id)}>
+            <a href="#" onClick={evt => onSelect(evt, id)}>
               <img src={thumb} alt={title} />
             </a>
           </div>
@@ -37,7 +45,7 @@ export default class WorkItem extends Component {
               className="work-item__btn"
               size="sm"
               color="secondary"
-              onClick={(evt) => onSelect(evt, id)}
+              onClick={evt => onSelect(evt, id)}
             >
               MORE INFO
             </Button>

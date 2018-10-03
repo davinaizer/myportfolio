@@ -2,8 +2,9 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.app-navbar .nav-item.isActive {
-  border-bottom: 2px solid $sizzling-red;
+.app-navbar .nav-link.isActive {
+  color: $eerie-black;
+  background-color: $dark-vanilla;
 }
 
 .app-navbar .navbar-brand {
@@ -15,7 +16,8 @@
   color: $dark-vanilla;
 }
 
-.app-navbar .navbar-nav .nav-link {
+.app-navbar .nav-link {
+  margin: 0 10px;
   color: $dark-vanilla;
   font-weight: bold;
 }

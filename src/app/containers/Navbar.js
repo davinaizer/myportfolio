@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 
@@ -34,7 +34,7 @@ export default class TopNav extends Component {
     return (
       <div>
         <Navbar className="app-navbar" fixed="top" expand="md">
-          <Link to="/">
+          <NavLink to="/">
             <img
               src={brandImg}
               className="navbar-brand"
@@ -42,30 +42,46 @@ export default class TopNav extends Component {
               height="40"
               alt="Home"
             />
-          </Link>
+          </NavLink>
 
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav onClick={this.close} className="ml-auto" navbar>
               <NavItem>
-                <Link to="/about" className="nav-link">
+                <NavLink
+                  to="/about"
+                  className="nav-link"
+                  activeClassName="isActive"
+                >
                   About
-                </Link>
+                </NavLink>
               </NavItem>
               <NavItem>
-                <Link to="/work" className="nav-link">
+                <NavLink
+                  to="/work"
+                  className="nav-link"
+                  activeClassName="isActive"
+                >
                   Work
-                </Link>
+                </NavLink>
               </NavItem>
               <NavItem>
-                <Link to="/resume" className="nav-link">
+                <NavLink
+                  to="/resume"
+                  className="nav-link"
+                  activeClassName="isActive"
+                >
                   Resume
-                </Link>
+                </NavLink>
               </NavItem>
               <NavItem>
-                <Link to="/contact" className="nav-link">
+                <NavLink
+                  to="/contact"
+                  className="nav-link"
+                  activeClassName="isActive"
+                >
                   Contact
-                </Link>
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>

@@ -38,7 +38,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'scripts/[name].bundle.js',
     chunkFilename: 'scripts/[name].bundle.js',
-    publicPath: '',
+    publicPath: '/myportfolio/',
   },
   optimization: {
     splitChunks: {
@@ -77,7 +77,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: false,
+              url: true,
               sourceMap: isDevMode,
             },
           },

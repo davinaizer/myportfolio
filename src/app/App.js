@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+// import CSS first of all
 import './App.scss';
 
 import About from './containers/About';
@@ -12,54 +14,24 @@ import Work from './containers/Work';
 export default class App extends Component {
   constructor(props) {
     super(props);
-
-    this.onSelect = this.onSelect.bind(this);
-    this.state = {
-      currentSection: '',
-    };
-  }
-
-  onSelect(evt) {
-    evt.preventDefault();
-
-    let target = evt.currentTarget || evt.target;
-    let selectedId = target.href && target.href.split('#')[1];
-
-    this.setState(prevState => ({
-      currentSection: selectedId,
-    }));
   }
 
   render() {
-    let component = '';
-    switch (this.state.currentSection) {
-      case 'home':
-        component = <Cover onSelect={this.onSelect} />;
-        break;
-      case 'about':
-        component = <About />;
-        break;
-      case 'work':
-        component = <Work />;
-        break;
-      case 'resume':
-        component = <Resume />;
-        break;
-      case 'contact':
-        component = <Contact />;
-        break;
-      default:
-        component = <Cover onSelect={this.onSelect} />;
-    }
-
-    //reset scroll
+    //reset window scroll
     window.scrollTo(0, 0);
 
     return (
-      <div>
-        <Navbar onSelect={this.onSelect} />
-        {component}
-      </div>
+      <Router>
+        <div>
+          <Navbar />
+
+          <Route exact path="/" component={Cover} />
+          <Route path="/about" component={About} />
+          <Route path="/work" component={Work} />
+          <Route path="/resume" component={Resume} />
+          <Route path="/contact" component={Contact} />
+        </div>
+      </Router>
     );
   }
 }

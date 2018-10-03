@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --hot --inline --open --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "clean": "rimraf dist && git worktree prune",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },

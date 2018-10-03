@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'reactstrap';
-
-import TweenLite from 'gsap/TweenLite';
-import Expo from 'gsap';
-import 'gsap/CSSPlugin';
+import { TweenLite, Power1 } from 'gsap';
 
 import '../containers/Cover.scss';
 
@@ -17,20 +15,11 @@ export default class Cover extends Component {
   componentDidMount() {
     TweenLite.from(this.sectionRef.current, 1, {
       opacity: 0,
-      ease: Expo.easeInOut,
-    });
-  }
-
-  componentWillUnmount() {
-    TweenLite.to(this.sectionRef.current, 1, {
-      opacity: 0,
-      ease: Expo.easeInOut,
+      ease: Power1.easeOut,
     });
   }
 
   render() {
-    const { onSelect } = this.props;
-
     return (
       <header className="masthead" ref={this.sectionRef}>
         <Container className="d-flex h-100 align-items-center">
@@ -44,14 +33,15 @@ export default class Cover extends Component {
                 E-Learning Developer
               </h2>
               <p className="mb-5">
-                Hi. Iʼm Davi, a problem solver who loves helping people come
-                up with new ideas and solutions.
+                Hi. Iʼm Davi, a problem solver who loves helping people come up
+                with new ideas and solutions.
               </p>
-              <a href="#about" onClick={evt => onSelect(evt)}>
+
+              <Link to="/about">
                 <Button className="cover__btn" color="primary" size="lg">
                   GET TO KNOW
                 </Button>
-              </a>
+              </Link>
             </Col>
           </Row>
         </Container>

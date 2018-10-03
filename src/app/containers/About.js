@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import TweenLite from 'gsap/TweenLite';
-import Expo from 'gsap';
-import 'gsap/CSSPlugin';
+import { TweenLite, Power1 } from 'gsap';
 
 import '../containers/About.scss';
 
@@ -15,14 +13,7 @@ export default class About extends Component {
   componentDidMount() {
     TweenLite.from(this.sectionRef.current, 1, {
       opacity: 0,
-      ease: Expo.easeInOut,
-    });
-  }
-
-  componentWillUnmount() {
-    TweenLite.to(this.sectionRef.current, 1, {
-      opacity: 0,
-      ease: Expo.easeInOut,
+      ease: Power1.easeOut,
     });
   }
 
@@ -73,8 +64,8 @@ export default class About extends Component {
                 accounting, business laws, etc.
                 <br />
                 <br />
-                Currently, I work as a frelance Front-end Web Developer in
-                Curitiba/PR, Brazil.
+                Currently, I work as a freelance E-learning and Front-end
+                Developer in Curitiba/PR, Brazil.
               </p>
             </Col>
           </Row>

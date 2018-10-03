@@ -6,8 +6,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
-const WebpackBundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
+const WebpackBundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 
 // VARS DEF
 const isDevMode = process.env.NODE_ENV !== 'production';
@@ -53,13 +53,6 @@ module.exports = {
     },
   },
   devtool: 'eval-source-map',
-  resolve: {
-    alias: {
-      Components: './src/app/components/',
-      Containers: './src/app/containers/',
-      Images: './src/app/img/',
-    },
-  },
   module: {
     rules: [
       {
@@ -121,5 +114,5 @@ module.exports = {
     ],
   },
 
-  plugins: [CleanPlugin, HtmlPlugin, MiniCssPlugin, ImageminPlugin, BundleAnalyzerPlugin],
+  plugins: [CleanPlugin, HtmlPlugin, MiniCssPlugin, ImageminPlugin],
 };

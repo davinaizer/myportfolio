@@ -34,14 +34,8 @@ export default class TopNav extends Component {
     return (
       <div>
         <Navbar className="app-navbar" fixed="top" expand="md">
-          <NavLink to="/">
-            <img
-              src={brandImg}
-              className="navbar-brand"
-              width="40"
-              height="40"
-              alt="Home"
-            />
+          <NavLink to="/" className="navbar-brand" activeClassName="">
+            <p>DN</p>
           </NavLink>
 
           <NavbarToggler onClick={this.toggle} />

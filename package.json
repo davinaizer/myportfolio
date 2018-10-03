@@ -7,8 +7,8 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --hot --inline --open --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "clean": "rimraf dist && git worktree prune",
-    "publish-gh": "cd dist && git add --all && git commit -m 'Deploy to gh-pages' && git push origin gh-pages",
-    "deploy": "npm run clean && git worktree add dist gh-pages && npm run build && npm run publish-gh"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -61,6 +61,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
+    "gh-pages": "^2.0.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-router-dom": "^4.3.1",

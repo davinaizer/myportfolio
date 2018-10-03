@@ -114,11 +114,5 @@ module.exports = {
     ],
   },
 
-  plugins: [
-    CleanPlugin,
-    HtmlPlugin,
-    MiniCssPlugin,
-    ImageminPlugin,
-    BundleAnalyzerPlugin,
-  ],
+  plugins: [CleanPlugin, HtmlPlugin, MiniCssPlugin, ImageminPlugin],
 };

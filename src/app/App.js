@@ -21,7 +21,7 @@ export default class App extends Component {
     window.scrollTo(0, 0);
 
     return (
-      <Router>
+      <Router basename="/myportfolio">
         <div>
           <Navbar />
 

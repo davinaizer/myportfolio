@@ -1,13 +1,14 @@
 {
   "name": "myportfolio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Naizer portfolio",
   "main": "src/app/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --hot --inline --open --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "clean": "rimraf dist && git worktree prune",
-    "deploy": "npm run clean && git worktree add dist gh-pages && npm run build && git -C ./dist add --all && git -C ./dist commit -m 'Deploy to gh-pages' && git -C ./dist push origin gh-pages"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/davinaizer/myportfolio/issues"
   },
-  "homepage": "https://github.com/davinaizer/myportfolio#readme",
+  "homepage": "https://davinaizer.github.io/myportfolio/",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.0.0",
@@ -60,6 +61,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
+    "gh-pages": "^2.0.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-router-dom": "^4.3.1",

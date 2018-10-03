@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import TweenLite from 'gsap/TweenLite';
-import Expo from 'gsap';
-import 'gsap/CSSPlugin';
+import { TweenLite, Power1 } from 'gsap';
 
 import '../containers/Contact.scss';
 
@@ -22,14 +20,7 @@ export default class Contact extends Component {
   componentDidMount() {
     TweenLite.from(this.sectionRef.current, 1, {
       opacity: 0,
-      ease: Expo.easeInOut,
-    });
-  }
-
-  componentWillUnmount() {
-    TweenLite.to(this.sectionRef.current, 1, {
-      opacity: 0,
-      ease: Expo.easeInOut,
+      ease: Power1.easeOut,
     });
   }
 

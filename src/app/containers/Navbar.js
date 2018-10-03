@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap';
+import { Link } from 'react-router-dom';
+// import PropTypes from 'prop-types';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 
 import './Navbar.scss';
+
 import brandImg from '../img/nav_brand.svg';
 
 export default class TopNav extends Component {
@@ -37,37 +31,41 @@ export default class TopNav extends Component {
   }
 
   render() {
-    const { onSelect } = this.props;
-
     return (
       <div>
         <Navbar className="app-navbar" fixed="top" expand="md">
-          <NavbarBrand href="#home" onClick={evt => onSelect(evt)}>
-            <img src={brandImg} width="40" height="40" alt="Home" />
-          </NavbarBrand>
+          <Link to="/">
+            <img
+              src={brandImg}
+              className="navbar-brand"
+              width="40"
+              height="40"
+              alt="Home"
+            />
+          </Link>
 
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav onClick={this.close} className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#about" onClick={evt => onSelect(evt)}>
+                <Link to="/about" className="nav-link">
                   About
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLink href="#work" onClick={evt => onSelect(evt)}>
+                <Link to="/work" className="nav-link">
                   Work
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLink href="#resume" onClick={evt => onSelect(evt)}>
+                <Link to="/resume" className="nav-link">
                   Resume
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLink href="#contact" onClick={evt => onSelect(evt)}>
+                <Link to="/contact" className="nav-link">
                   Contact
-                </NavLink>
+                </Link>
               </NavItem>
             </Nav>
           </Collapse>
@@ -76,7 +74,3 @@ export default class TopNav extends Component {
     );
   }
 }
-
-TopNav.propTypes = {
-  onSelect: PropTypes.func,
-};

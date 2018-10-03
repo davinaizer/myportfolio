@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
-import TweenLite from 'gsap/TweenLite';
-import Expo from 'gsap';
-import 'gsap/CSSPlugin';
+import { TweenLite, Power1 } from 'gsap';
 
 import Modal from '../components/Modal';
 import WorkInfo from '../components/WorkInfo';
@@ -31,14 +29,7 @@ export default class Work extends Component {
   componentDidMount() {
     TweenLite.from(this.sectionRef.current, 1, {
       opacity: 0,
-      ease: Expo.easeInOut,
-    });
-  }
-
-  componentWillUnmount() {
-    TweenLite.to(this.sectionRef.current, 1, {
-      opacity: 0,
-      ease: Expo.easeInOut,
+      ease: Power1.easeOut,
     });
   }
 
@@ -46,7 +37,7 @@ export default class Work extends Component {
     evt.preventDefault();
 
     document.body.classList.add('modal-open');
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       currentId: +id,
       isOpen: true,
     }));

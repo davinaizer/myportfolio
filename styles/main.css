@@ -4265,15 +4265,20 @@ section {
 .app-navbar {
   background-color: rgba(0, 0, 0, 0.75); }
 
-.app-navbar .nav-item .isActive {
+.app-navbar .nav-link.isActive {
   color: #181a26;
   background-color: #cfc4b2; }
+
+.app-navbar .navbar-brand {
+  width: 50px;
+  height: 50px; }
 
 .app-navbar .navbar-brand,
 .app-navbar .navbar-text {
   color: #cfc4b2; }
 
-.app-navbar .navbar-nav .nav-link {
+.app-navbar .nav-link {
+  margin: 0 10px;
   color: #cfc4b2;
   font-weight: bold; }
 

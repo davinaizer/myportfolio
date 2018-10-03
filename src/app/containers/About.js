@@ -64,8 +64,8 @@ export default class About extends Component {
                 accounting, business laws, etc.
                 <br />
                 <br />
-                Currently, I work as a frelance Front-end Web Developer in
-                Curitiba/PR, Brazil.
+                Currently, I work as a freelance E-learning and Front-end
+                Developer in Curitiba/PR, Brazil.
               </p>
             </Col>
           </Row>

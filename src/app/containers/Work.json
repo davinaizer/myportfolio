@@ -123,7 +123,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "Website // UNBOX",
       "summary": "A single page website built using Bootstrap as CSS Framework, RequireJS, jQuery and Gulp as task runner.",
       "description": "A single page website built using Bootstrap as CSS Framework, RequireJS, jQuery and Gulp as task runner.",
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "FOLKS LMS",
       "summary": "FOLKS LMS is a Learning Management System based on the open-source LMS project Moodle.  This project was built during my time at my former company, UNBOX.",
       "description": "FOLKS LMS is a Learning Management System based on the open-source LMS project Moodle.  This project was built during my time at my former company, UNBOX. It was designed to be a cost-effective solution in a very competing market. To achieve that, we focused on reducing infrastructure costs.<br /><br />For the interface side, we created a template-based approach using Bootstrap. The templates were created by the design/UX team, and I was responsible for implementing using Bootstrap, JS, and SASS.<br /><br />As for the infrastructure, I was responsible for building a web server using AWS EC2 and Ubuntu Server. There were some production-ready instances on AWS Marketplace, but they tend to cost a lot in the long-term. To reduce costs, we choose the free-tier (t2.micro) instance from AWS and would scale the instance according to inbound traffic.<br /><br />The server was setup using Linux Ubuntu, Apache, MySQL and PHP (LAMP) and a lot of others tailor-made configurations to boost performance, security, and flexibility.",

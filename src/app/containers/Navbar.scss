@@ -33,9 +33,11 @@
 }
 
 .app-navbar .nav-link {
-  margin: 0 10px;
   color: $dark-vanilla;
   font-weight: bold;
+  margin: 0 10px;
+  padding: 10px;
+  text-align: center;
 }
 
 .app-navbar .nav-item.active .nav-link,

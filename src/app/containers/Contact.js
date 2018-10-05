@@ -1,27 +1,18 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { TweenLite, Power1 } from 'gsap';
+import { SocialIcon } from '../components';
 
-import '../containers/Contact.scss';
+import './Contact.scss';
 
 import icon0 from '../img/social_envelope-square.svg';
 import icon1 from '../img/social_facebook.svg';
 import icon2 from '../img/social_linkedin.svg';
 import icon3 from '../img/social_github.svg';
 
-import SocialIcon from '../components/SocialIcon';
-
 export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.sectionRef = React.createRef();
-  }
-
-  componentDidMount() {
-    TweenLite.from(this.sectionRef.current, 1, {
-      opacity: 0,
-      ease: Power1.easeOut,
-    });
   }
 
   render() {

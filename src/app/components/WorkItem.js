@@ -1,28 +1,21 @@
 import React, { Component } from 'react';
 import { Button, Row, Col } from 'reactstrap';
-import AOS from 'aos';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import TagList from './TagList';
 
 import './WorkItem.scss';
-import TagList from './TagList';
 
 export default class WorkItem extends Component {
   constructor(props) {
     super(props);
-
-    AOS.init();
   }
 
   render() {
     const { id, thumb, title, summary, tags, isFlipped, onSelect } = this.props;
 
     return (
-      <Row
-        noGutters
-        className="work-item"
-        data-aos={'fade-' + (isFlipped ? 'left' : 'right')}
-        data-aos-anchor-placement="bottom-bottom"
-      >
+      <Row noGutters className="work-item">
         <Col md="6">
           <div className="work-item__thumb">
             <a href="#" onClick={evt => onSelect(evt, id)}>

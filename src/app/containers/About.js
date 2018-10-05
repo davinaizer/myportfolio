@@ -1,20 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import { TweenLite, Power1 } from 'gsap';
 
-import '../containers/About.scss';
+import './About.scss';
 
 export default class About extends Component {
   constructor(props) {
     super(props);
     this.sectionRef = React.createRef();
-  }
-
-  componentDidMount() {
-    TweenLite.from(this.sectionRef.current, 1, {
-      opacity: 0,
-      ease: Power1.easeOut,
-    });
   }
 
   render() {

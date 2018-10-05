@@ -1,22 +1,13 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'reactstrap';
-import { TweenLite, Power1 } from 'gsap';
 
-import '../containers/Cover.scss';
+import './Cover.scss';
 
 export default class Cover extends Component {
   constructor(props) {
     super(props);
     this.sectionRef = React.createRef();
-  }
-
-  componentDidMount() {
-    TweenLite.from(this.sectionRef.current, 1, {
-      opacity: 0,
-      ease: Power1.easeOut,
-    });
   }
 
   render() {
@@ -49,7 +40,3 @@ export default class Cover extends Component {
     );
   }
 }
-
-Cover.propTypes = {
-  onSelect: PropTypes.func,
-};

@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
-import { TweenLite, Power1 } from 'gsap';
+import { Modal, WorkInfo, WorkList } from '../components';
 
-import Modal from '../components/Modal';
-import WorkInfo from '../components/WorkInfo';
-import WorkList from '../components/WorkList';
-
-// ASSETS
 import './Work.scss';
 
 //TODO: move data to DB
+//TODO: use Router to open selected item
 const WorkData = require('./Work.json').data;
 
 export default class Work extends Component {
@@ -26,18 +22,11 @@ export default class Work extends Component {
     };
   }
 
-  componentDidMount() {
-    TweenLite.from(this.sectionRef.current, 1, {
-      opacity: 0,
-      ease: Power1.easeOut,
-    });
-  }
-
   openModal(evt, id) {
     evt.preventDefault();
 
     document.body.classList.add('modal-open');
-    this.setState(prevState => ({
+    this.setState(() => ({
       currentId: +id,
       isOpen: true,
     }));
@@ -45,7 +34,7 @@ export default class Work extends Component {
 
   closeModal() {
     document.body.classList.remove('modal-open');
-    this.setState(prevState => ({
+    this.setState(() => ({
       isOpen: false,
     }));
   }

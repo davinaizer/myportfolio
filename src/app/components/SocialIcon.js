@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import './SocialIcon.scss';
 
@@ -9,5 +10,10 @@ const SocialIcon = ({ icon, href }) => (
     </a>
   </div>
 );
+
+SocialIcon.propTypes = {
+  icon: PropTypes.string,
+  href: PropTypes.string,
+};
 
 export default SocialIcon;

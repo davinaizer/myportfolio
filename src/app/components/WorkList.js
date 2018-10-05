@@ -1,5 +1,6 @@
 // FSC
 import React from 'react';
+import PropTypes from 'prop-types';
 import WorkItem from './WorkItem';
 
 const WorkList = ({ items, onSelect }) => {
@@ -17,6 +18,11 @@ const WorkList = ({ items, onSelect }) => {
   ));
 
   return workList;
+};
+
+WorkItem.propTypes = {
+  items: PropTypes.object,
+  onSelect: PropTypes.func,
 };
 
 export default WorkList;

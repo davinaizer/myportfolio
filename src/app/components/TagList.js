@@ -1,5 +1,6 @@
 // FSC
 import React from 'react';
+import PropTypes from 'prop-types';
 import './TagList.scss';
 
 const TagList = ({ items }) => (
@@ -11,5 +12,9 @@ const TagList = ({ items }) => (
     </ul>
   </div>
 );
+
+TagList.propTypes = {
+  items: PropTypes.array,
+};
 
 export default TagList;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Row, Col } from 'reactstrap';
 import AOS from 'aos';
+import PropTypes from 'prop-types';
 
 import './WorkItem.scss';
 import TagList from './TagList';
@@ -57,3 +58,13 @@ export default class WorkItem extends Component {
     );
   }
 }
+
+WorkItem.propTypes = {
+  id: PropTypes.number,
+  thumb: PropTypes.string,
+  title: PropTypes.string,
+  summary: PropTypes.string,
+  tags: PropTypes.object,
+  isFlipped: PropTypes.bool,
+  onSelect: PropTypes.func,
+};

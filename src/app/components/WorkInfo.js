@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, UncontrolledCarousel } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 import TagList from './TagList';
 import LinkList from './LinkList';
@@ -18,7 +19,7 @@ export default class WorkInfo extends Component {
   render() {
     const { title, description, images, links, tags } = this.props.data;
 
-    const gallery = images.gallery.map((item, index) => ({
+    const gallery = images.gallery.map(item => ({
       src: item,
       caption: '',
     }));
@@ -41,3 +42,12 @@ export default class WorkInfo extends Component {
     );
   }
 }
+
+WorkInfo.propTypes = {
+  data: PropTypes.object,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  images: PropTypes.object,
+  links: PropTypes.object,
+  tags: PropTypes.object,
+};

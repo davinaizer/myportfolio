@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 import './Modal.scss';
 
@@ -48,3 +49,9 @@ export default class Modal extends Component {
     );
   }
 }
+
+Modal.propTypes = {
+  show: PropTypes.bool,
+  onClose: PropTypes.func,
+  children: PropTypes.element.isRequired,
+};

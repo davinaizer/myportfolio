@@ -15,9 +15,8 @@ const LinkList = ({ items }) => (
   </div>
 );
 
-export default LinkList;
-
 LinkList.propTypes = {
-  items: PropTypes.array
+  items: PropTypes.array,
 };
 
+export default LinkList;

@@ -36,9 +36,12 @@ module.exports = {
   entry: './src/app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'scripts/[name].bundle.js',
-    chunkFilename: 'scripts/[name].bundle.js',
-    publicPath: '/myportfolio/',
+    filename: 'scripts/[name].js',
+    chunkFilename: 'scripts/[name].js',
+    publicPath: '/',
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   optimization: {
     splitChunks: {
@@ -84,9 +87,7 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: function() {
-                return [require('precss'), require('autoprefixer')];
-              },
+              plugins: () => [require('precss'), require('autoprefixer')],
             },
           },
           {
@@ -114,5 +115,11 @@ module.exports = {
     ],
   },
 
-  plugins: [CleanPlugin, HtmlPlugin, MiniCssPlugin, ImageminPlugin],
+  plugins: [
+    CleanPlugin,
+    HtmlPlugin,
+    MiniCssPlugin,
+    ImageminPlugin,
+    BundleAnalyzerPlugin,
+  ],
 };

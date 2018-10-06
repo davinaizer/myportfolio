@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 
 import './Navbar.scss';
@@ -28,6 +29,8 @@ export default class TopNav extends Component {
   }
 
   render() {
+    const { links } = this.props;
+
     return (
       <div>
         <Navbar className="app-navbar" fixed="top" expand="md">
@@ -38,42 +41,17 @@ export default class TopNav extends Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav onClick={this.close} className="ml-auto" navbar>
-              <NavItem>
-                <NavLink
-                  to="/about"
-                  className="nav-link"
-                  activeClassName="isActive"
-                >
-                  About
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  to="/work"
-                  className="nav-link"
-                  activeClassName="isActive"
-                >
-                  Work
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  to="/resume"
-                  className="nav-link"
-                  activeClassName="isActive"
-                >
-                  Resume
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  to="/contact"
-                  className="nav-link"
-                  activeClassName="isActive"
-                >
-                  Contact
-                </NavLink>
-              </NavItem>
+              {links.map(link => (
+                <NavItem key={link.path}>
+                  <NavLink
+                    to={link.path}
+                    className="nav-link"
+                    activeClassName="isActive"
+                  >
+                    {link.title}
+                  </NavLink>
+                </NavItem>
+              ))}
             </Nav>
           </Collapse>
         </Navbar>
@@ -81,3 +59,7 @@ export default class TopNav extends Component {
     );
   }
 }
+
+TopNav.propTypes = {
+  links: PropTypes.array,
+};

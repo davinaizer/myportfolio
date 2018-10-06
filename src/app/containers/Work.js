@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import { Modal, WorkInfo, WorkList } from '../components';
 
@@ -12,13 +13,12 @@ export default class Work extends Component {
   constructor(props) {
     super(props);
 
-    this.sectionRef = React.createRef();
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
 
     this.state = {
       currentId: 0,
-      isOpen: false,
+      isOpen: true,
     };
   }
 
@@ -41,7 +41,7 @@ export default class Work extends Component {
 
   render() {
     return (
-      <section id="work" className="work-section" ref={this.sectionRef}>
+      <section id="work" className="work-section">
         <Container>
           <div className="mb-5">
             <h2 className="section__title">Work</h2>
@@ -51,9 +51,9 @@ export default class Work extends Component {
           <WorkList items={WorkData} onSelect={this.openModal} />
         </Container>
 
-        <Modal show={this.state.isOpen} onClose={this.closeModal}>
+        {/* <Modal show={this.state.isOpen} onClose={this.closeModal}>
           <WorkInfo data={WorkData[this.state.currentId]} />
-        </Modal>
+        </Modal> */}
       </section>
     );
   }

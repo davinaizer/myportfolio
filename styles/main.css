@@ -4818,7 +4818,7 @@ section {
 
 .about-section {
   background-attachment: fixed;
-  background-image: url("../img/common/black_noise_50.png"), url("../img/about-bg.jpg");
+  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/about-bg.jpg);
   background-position: center top;
   background-repeat: repeat, no-repeat;
   background-size: unset, cover; }
@@ -4858,7 +4858,7 @@ section {
 
 .masthead {
   background-attachment: scroll;
-  background-image: url("../img/common/black_noise_50.png"), url("../img/cover-bg.jpg");
+  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/cover-bg.jpg);
   background-position: center bottom;
   background-repeat: repeat, no-repeat;
   background-size: unset, cover;
@@ -4906,61 +4906,6 @@ section {
 .link-list .btn {
   margin-right: 15px;
   margin-bottom: 15px; }
-
-html,
-body {
-  height: 100%; }
-
-section {
-  padding: 100px 0; }
-
-.section__title {
-  font-size: 48px;
-  font-weight: bold;
-  text-transform: lowercase; }
-  .section__title--inverse {
-    color: #181a26; }
-
-.section__subtitle--inverse {
-  color: #181a26; }
-
-.title__separator {
-  border-top: 4px solid #ff3454;
-  display: block;
-  margin-bottom: 30px;
-  width: 80px; }
-
-.btn {
-  font-weight: bold; }
-  .btn-primary {
-    background-color: transparent;
-    color: #ff3454; }
-  .btn-secondary {
-    background-color: transparent;
-    border: 1px solid #cfc4b2;
-    color: #cfc4b2; }
-
-.app-modal {
-  background-color: #30353a;
-  height: 100%;
-  left: 0;
-  overflow-x: hidden;
-  position: fixed;
-  top: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  width: 100%;
-  z-index: 10000; }
-  .app-modal__close {
-    position: absolute;
-    top: 30px;
-    right: 30px; }
-  .app-modal__footer {
-    margin: 30px auto;
-    text-align: center;
-    width: 90%; }
-    .app-modal__footer hr {
-      border: 0.5px solid #cfc4b2; }
 
 html,
 body {
@@ -5088,7 +5033,7 @@ section {
 
 .work-info-section {
   background-attachment: fixed;
-  background-image: url("../img/common/black_noise_50.png"), url("../img/work-bg.jpg");
+  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/work-bg.jpg);
   background-position: center top;
   background-repeat: repeat, no-repeat;
   background-size: auto auto, 100%;
@@ -5243,7 +5188,7 @@ section {
 .contact-section {
   background-attachment: scroll;
   background-color: #262b3d;
-  background-image: url("../img/common/black_noise_50.png"), url("../img/contact-bg.jpg");
+  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/contact-bg.jpg);
   background-position: center top;
   background-repeat: repeat, no-repeat;
   background-size: auto auto, cover;
@@ -5365,7 +5310,7 @@ section {
 .resume-section {
   background-attachment: scroll;
   background-color: #262b3d;
-  background-image: url("../img/common/black_noise_50.png"), url("../img/resume-bg.jpg");
+  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/resume-bg.jpg);
   background-position: right top;
   background-repeat: repeat, no-repeat;
   background-size: auto auto, auto;
@@ -5415,7 +5360,7 @@ section {
 
 .work-section {
   background-attachment: fixed;
-  background-image: url("../img/common/black_noise_50.png"), url("../img/work-bg.jpg");
+  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/work-bg.jpg);
   background-position: center top;
   background-repeat: repeat, no-repeat;
   background-size: auto auto, 100%;

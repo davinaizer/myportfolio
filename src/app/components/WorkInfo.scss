@@ -1,23 +1,38 @@
+.work-info-section {
+  background-attachment: fixed;
+  background-image: url('../img/common/black_noise_50.png'),
+    url('../img/work-bg.jpg');
+  background-position: center top;
+  background-repeat: repeat, no-repeat;
+  background-size: initial, 100%;
+}
+
 .work-info {
-  margin-top: 80px;
-  margin-bottom: 30px;
-
-  &__cover {
-    margin: 30px 0;
-    height: 100%;
-    width: 100%;
-  }
-
   &__description {
-    margin: 30px 0;
+    margin: 60px 0;
   }
 
   &__gallery {
-    margin: 45px 0;
+    margin: 60px 0;
+  }
+
+  &__footer {
+    hr {
+      border-color: $dark-vanilla;
+      margin: 60px auto;
+    }
   }
 
   .tag-list {
-    margin-bottom: 30px;
+    margin: 30px 0;
+    ul {
+      li {
+        color: $charcoal;
+        font-weight: bold;
+        font-size: 80%;
+        background-color: $dark-vanilla;
+      }
+    }
   }
 }
 

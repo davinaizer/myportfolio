@@ -6,13 +6,13 @@ import TagList from './TagList';
 
 import './WorkItem.scss';
 
-const WorkItem = ({ id, thumb, title, summary, tags, isFlipped, onSelect }) => (
+const WorkItem = ({ id, thumb, title, summary, tags, isFlipped }) => (
   <Row noGutters className="work-item">
     <Col md="6">
       <div className="work-item__thumb">
-        <a href="#" onClick={evt => onSelect(evt, id)}>
+        <Link to={'/work/' + id}>
           <img src={thumb} alt={title} />
-        </a>
+        </Link>
       </div>
     </Col>
 
@@ -28,15 +28,11 @@ const WorkItem = ({ id, thumb, title, summary, tags, isFlipped, onSelect }) => (
         </div>
 
         <Link to={'/work/' + id}>
-          <Button
-            className="work-item__btn"
-            size="sm"
-            color="secondary"
-            // onClick={evt => onSelect(evt, id)}
-          >
+          <Button className="work-item__btn" size="sm" color="secondary">
             MORE INFO
           </Button>
         </Link>
+
         <TagList items={tags} />
       </div>
     </Col>
@@ -50,7 +46,6 @@ WorkItem.propTypes = {
   summary: PropTypes.string,
   tags: PropTypes.object,
   isFlipped: PropTypes.bool,
-  onSelect: PropTypes.func,
 };
 
 export default WorkItem;

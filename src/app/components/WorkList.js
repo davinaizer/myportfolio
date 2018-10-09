@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WorkItem from './WorkItem';
 
-const WorkList = ({ items, onSelect }) => {
+const WorkList = ({ items }) => {
   const workList = items.map((item, index) => (
     <WorkItem
       key={item.id}
@@ -12,7 +12,6 @@ const WorkList = ({ items, onSelect }) => {
       title={item.title}
       summary={item.summary}
       tags={item.tags}
-      onSelect={onSelect}
       isFlipped={(index + 1) % 2 == 0 ? true : undefined}
     />
   ));

@@ -4818,7 +4818,7 @@ section {
 
 .about-section {
   background-attachment: fixed;
-  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/about-bg.jpg);
+  background-image: url("../img/common/black_noise_50.png"), url("../img/about-bg.jpg");
   background-position: center top;
   background-repeat: repeat, no-repeat;
   background-size: unset, cover; }
@@ -4858,7 +4858,7 @@ section {
 
 .masthead {
   background-attachment: scroll;
-  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/cover-bg.jpg);
+  background-image: url("../img/common/black_noise_50.png"), url("../img/cover-bg.jpg");
   background-position: center bottom;
   background-repeat: repeat, no-repeat;
   background-size: unset, cover;
@@ -5088,7 +5088,7 @@ section {
 
 .work-info-section {
   background-attachment: fixed;
-  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/work-bg.jpg);
+  background-image: url("../img/common/black_noise_50.png"), url("../img/work-bg.jpg");
   background-position: center top;
   background-repeat: repeat, no-repeat;
   background-size: auto auto, 100%;
@@ -5243,7 +5243,7 @@ section {
 .contact-section {
   background-attachment: scroll;
   background-color: #262b3d;
-  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/contact-bg.jpg);
+  background-image: url("../img/common/black_noise_50.png"), url("../img/contact-bg.jpg");
   background-position: center top;
   background-repeat: repeat, no-repeat;
   background-size: auto auto, cover;
@@ -5365,7 +5365,7 @@ section {
 .resume-section {
   background-attachment: scroll;
   background-color: #262b3d;
-  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/resume-bg.jpg);
+  background-image: url("../img/common/black_noise_50.png"), url("../img/resume-bg.jpg");
   background-position: right top;
   background-repeat: repeat, no-repeat;
   background-size: auto auto, auto;
@@ -5415,7 +5415,7 @@ section {
 
 .work-section {
   background-attachment: fixed;
-  background-image: url(/myportfolio/img/black_noise_50.png), url(/myportfolio/img/work-bg.jpg);
+  background-image: url("../img/common/black_noise_50.png"), url("../img/work-bg.jpg");
   background-position: center top;
   background-repeat: repeat, no-repeat;
   background-size: auto auto, 100%;

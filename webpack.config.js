@@ -27,7 +27,9 @@ const ImageminPlugin = new ImageminWebpackPlugin({
   },
   test: /\.(png|jpg|gif)$/,
 });
-const BundleAnalyzerPlugin = new WebpackBundleAnalyzerPlugin();
+const BundleAnalyzerPlugin = isDevMode
+  ? new WebpackBundleAnalyzerPlugin()
+  : () => null;
 
 // WEBPACK CONF
 module.exports = {
@@ -36,7 +38,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'scripts/[name].js',
     chunkFilename: 'scripts/[name].js',
-    publicPath: '/',
+    publicPath: isDevMode ? '/' : '/myportfolio/',
   },
   devServer: {
     historyApiFallback: true,
@@ -105,7 +107,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 7168,
-              name: 'img/[name].[ext]',
+              name: '[path][name].[ext]',
             },
           },
         ],
@@ -113,11 +115,5 @@ module.exports = {
     ],
   },
 
-  plugins: [
-    CleanPlugin,
-    HtmlPlugin,
-    MiniCssPlugin,
-    ImageminPlugin,
-    BundleAnalyzerPlugin,
-  ],
+  plugins: [CleanPlugin, HtmlPlugin, MiniCssPlugin, ImageminPlugin],
 };

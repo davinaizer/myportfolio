@@ -1,10 +1,11 @@
 .resume-section {
   background-attachment: scroll;
   background-color: $gunmetal;
-  background-image: url('../img/resume-bg.jpg');
+  background-image: url('../img/common/black_noise_50.png'),
+    url('../img/resume-bg.jpg');
   background-position: right top;
-  background-repeat: no-repeat;
-  background-size: auto;
+  background-repeat: repeat, no-repeat;
+  background-size: initial, auto;
 
   min-height: 600px;
 }

@@ -1,12 +1,12 @@
 .contact-section {
   background-attachment: scroll;
   background-color: $gunmetal;
-  background-image: url('../img/contact-bg.jpg');
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('../img/common/black_noise_50.png'),
+    url('../img/contact-bg.jpg');
+  background-position: center top;
+  background-repeat: repeat, no-repeat;
+  background-size: initial, cover;
 
-  height: auto;
   min-height: 100vh;
   padding: 10rem 0;
 }

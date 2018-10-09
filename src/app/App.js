@@ -2,14 +2,28 @@ import './App.scss';
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { About, Home, Contact, Navbar, Resume, Work } from './containers';
-import { ScrollToTop } from './components';
+import { ScrollToTop, WorkInfo } from './components';
+
+const AppData = require('./App.json');
 
 // workaround for gh-pages
 const basename = process.env.NODE_ENV === 'production' ? '/myportfolio' : null;
 const routes = [
-  { path: '/', title: 'Home', Component: Home },
+  { path: '/', title: 'Home', Component: Home, isVisible: false },
   { path: '/about', title: 'About', Component: About },
-  { path: '/work', title: 'Work', Component: Work },
+  {
+    path: '/work',
+    title: 'Work',
+    Component: Work,
+    data: { data: AppData.work },
+  },
+  {
+    path: '/work/:id',
+    title: 'Work',
+    Component: WorkInfo,
+    isVisible: false,
+    data: { data: AppData.work },
+  },
   { path: '/resume', title: 'Resume', Component: Resume },
   { path: '/contact', title: 'Contact', Component: Contact },
 ];
@@ -19,12 +33,17 @@ const App = () => (
     <Route
       render={() => (
         <div>
-          <Navbar links={routes.slice(1)} />
+          <Navbar links={routes} />
 
           <ScrollToTop>
             <Switch>
-              {routes.map(({ path, Component }) => (
-                <Route key={path} exact path={path} component={Component} />
+              {routes.map(({ path, Component, data }) => (
+                <Route
+                  key={path}
+                  exact
+                  path={path}
+                  render={props => <Component {...data} {...props} />}
+                />
               ))}
             </Switch>
           </ScrollToTop>

@@ -1,5 +1,3 @@
-//TODO: Add CSS minimizer
-
 // IMPORTS
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');

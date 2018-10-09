@@ -30,6 +30,7 @@ export default class TopNav extends Component {
 
   render() {
     const { links } = this.props;
+    const navLinks = links.filter(item => item.isVisible !== false);
 
     return (
       <div>
@@ -41,7 +42,7 @@ export default class TopNav extends Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav onClick={this.close} className="ml-auto" navbar>
-              {links.map(link => (
+              {navLinks.map(link => (
                 <NavItem key={link.path}>
                   <NavLink
                     to={link.path}

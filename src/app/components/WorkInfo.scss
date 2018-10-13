@@ -1,10 +1,9 @@
 .work-info-section {
-  background-attachment: fixed;
-  background-image: url('../img/common/black_noise_50.png'),
-    url('../img/work-bg.jpg');
+  background-image: linear-gradient(rgba($black, 0), rgba($black, 1)),
+    url('../img/common/black_noise_50.png'), url('../img/work-bg.jpg');
   background-position: center top;
-  background-repeat: repeat, no-repeat;
-  background-size: initial, 100%;
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-size: auto, auto, cover;
 }
 
 .work-info {
@@ -25,13 +24,11 @@
 
   .tag-list {
     margin: 30px 0;
-    ul {
-      li {
-        color: $charcoal;
-        font-weight: bold;
-        font-size: 80%;
-        background-color: $dark-vanilla;
-      }
+    ul li {
+      color: $white;
+      font-weight: bold;
+      font-size: 70%;
+      background-color: $sizzling-red;
     }
   }
 }

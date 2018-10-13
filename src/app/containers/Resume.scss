@@ -1,13 +1,13 @@
 .resume-section {
-  background-attachment: scroll;
-  background-color: $gunmetal;
-  background-image: url('../img/common/black_noise_50.png'),
-    url('../img/resume-bg.jpg');
+  background-attachment: fixed;
+  background-color: $eerie-black;
+  background-image: linear-gradient(rgba($black, 0), rgba($black, 1)),
+    url('../img/common/black_noise_50.png'), url('../img/resume-bg.jpg');
   background-position: right top;
-  background-repeat: repeat, no-repeat;
-  background-size: initial, auto;
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-size: auto, auto, cover;
 
-  min-height: 600px;
+  min-height: 100vh;
 }
 
 .resume__title {

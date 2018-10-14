@@ -1,0 +1,11 @@
+.contact-section {
+  background-attachment: fixed;
+  background-image: linear-gradient(to top, rgba($black, 0), rgba($black, 1)),
+    url('../assets/black_noise_50.png'), url('../assets/contact-bg.jpg');
+  background-position: center top;
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-size: auto, auto, cover;
+
+  min-height: 100vh;
+  padding: 10rem 0;
+}

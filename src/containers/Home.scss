@@ -1,0 +1,17 @@
+.masthead {
+  background-attachment: scroll;
+  background-image: linear-gradient(rgba($black, 1), rgba($black, 0)),
+    url('../assets/black_noise_50.png'), url('../assets/cover-bg.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-size: auto, auto, cover;
+
+  height: 100vh;
+  padding: 10em 0;
+  position: relative;
+  width: 100%;
+}
+
+.home__btn {
+  padding: 15px 30px;
+}

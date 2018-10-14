@@ -6,7 +6,7 @@ import './Home.scss';
 
 const Home = () => (
   <header className="masthead">
-    <Container className="d-flex h-100 align-items-center">
+    <Container className="d-flex h-100">
       <Row>
         <Col sm="8">
           <h1 className="mb-2">DAVI NAIZER</h1>

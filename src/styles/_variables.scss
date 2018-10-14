@@ -1,0 +1,27 @@
+// Theme Palette
+$black: #040303;
+$eerie-black: #181a26;
+$jungle-green: #212420;
+$charcoal: #30353a;
+$gunmetal: #262b3d;
+$sizzling-red: #ff3454;
+$cinereous: #938677;
+$dark-vanilla: #cfc4b2;
+$white: #fff;
+
+// OVERRIDE BOOTSTRAP VARS
+// Fonts
+
+$font-family-base: 'Montserrat';
+$body-bg: $eerie-black;
+$body-color: $white;
+
+// Color system
+
+$primary: $sizzling-red;
+$secondary: $dark-vanilla;
+
+// Buttons
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;

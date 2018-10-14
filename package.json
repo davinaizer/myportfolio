@@ -4,11 +4,10 @@
   "description": "Naizer portfolio",
   "main": "src/app/index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --hot --inline --open --mode development",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --open --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "clean": "rimraf dist && git worktree prune",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -29,7 +28,6 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "aos": "^2.3.3",
     "autoprefixer": "^9.1.5",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.4",
@@ -42,13 +40,14 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
-    "gsap": "^2.0.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "imagemin-webpack-plugin": "^2.3.0",
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
+    "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.1.1",
     "precss": "^3.1.2",
     "sass-lint": "^1.12.1",
     "sass-loader": "^7.1.0",
@@ -57,13 +56,16 @@
     "webpack": "^4.18.1",
     "webpack-bundle-analyzer": "^3.0.2",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.8"
+    "webpack-dev-server": "^3.1.8",
+    "webpack-manifest-plugin": "^2.0.4"
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
     "gh-pages": "^2.0.0",
     "react": "^16.5.1",
+    "react-dev-utils": "^6.0.4",
     "react-dom": "^16.5.1",
+    "react-pose": "^3.3.6",
     "react-router-dom": "^4.3.1",
     "reactstrap": "^6.4.0"
   }

@@ -4198,6 +4198,7 @@ section {
   .social__icon img {
     height: 80px;
     margin-right: 30px;
+    margin-top: 30px;
     width: 80px;
     transition: all 0.25s; }
     .social__icon img:hover {

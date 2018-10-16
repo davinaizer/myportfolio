@@ -8,6 +8,59 @@
   background-size: auto, auto, cover;
 
   min-height: 100vh;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      line-height: 200%;
+    }
+  }
+
+  ul.timeline {
+    list-style-type: none;
+    position: relative;
+  }
+
+  ul.timeline:before {
+    content: ' ';
+    background: $charcoal;
+    display: inline-block;
+    position: absolute;
+    left: -1px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+  }
+
+  ul.timeline > li {
+    margin: 30px;
+    padding-left: 0;
+  }
+
+  ul.timeline > li:before {
+    content: ' ';
+    background: $dark-vanilla;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid $charcoal;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    z-index: 500;
+    margin-top: 10px;
+  }
+
+  .btn-download {
+    padding: 10px 15px;
+
+    img {
+      margin-left: 15px;
+      height: 20px;
+    }
+  }
 }
 
 .resume__title {

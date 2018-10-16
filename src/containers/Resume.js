@@ -1,7 +1,10 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Button } from 'reactstrap';
 
 import './Resume.scss';
+
+import pdfIcon from '../assets/file-pdf.svg';
+import pdfFile from '../assets/201810_cv_davi_naizer.pdf';
 
 const Resume = () => (
   <section id="resume" className="resume-section">
@@ -13,63 +16,63 @@ const Resume = () => (
         </Col>
       </Row>
 
-      <Row className="text-justify">
-        <Col xs="12" sm="6" className="">
-          <p>
-            I&#x27;ve been creating web and learning content for almost 18 years
-            now. I worked on many projects over these years along big companies
-            like Kraft Foods Brasil, Electrolux Sweden, Volvo Motors, HSBC Bank,
-            Furukawa Electric, GP Strategies, Metlife Brasil, O Boticário and
-            many others.
-          </p>
-        </Col>
-        <Col xs="12" sm="6" className="">
-          <p>
-            As a tech enthusiast and an eager learner, I&#x27;m always looking
-            for new tools and ways to improve mine and team&#x27;s quality of
-            life. If I need to learn something new, no problem, just give some
-            time and I will do my best.
-          </p>
+      <Row className="">
+        <Col lg="12">
+          <a href={pdfFile} target="_blank" rel="noopener noreferrer">
+            <Button className="secondary btn-download">
+              Download CV
+              <img src={pdfIcon} alt="Download Curriculum - PDF" />
+            </Button>
+          </a>
         </Col>
       </Row>
 
-      <Row className="mt-5">
-        <Col md="3">
+      <Row className="my-5">
+        <Col lg="3">
           <h2 className="resume__title">education</h2>
         </Col>
+
         <Col className="mx-auto">
-          <p>
-            <span className="resume__subtitle">
-              2007-2010
-              <br />
-              COMPUTER ENGINEERING
-            </span>
-            <br />
-            Positivo University, Curitiba-PR
-          </p>
-          <p>
-            <span className="resume__subtitle">
-              2005-2006
-              <br />
-              ELECTRICAL ENGINEERING
-            </span>
-            <br />
-            Positivo University, Curitiba-PR
-          </p>
-          <p>
-            <span className="resume__subtitle">
-              1997-2000
-              <br />
-              ELECTRONICS
-            </span>
-            <br />
-            Federal University of Technology - Paraná (UTFPR)
-          </p>
+          <ul className="timeline">
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2007-2010
+                  <br />
+                  COMPUTER ENGINEERING
+                </span>
+                <br />
+                Positivo University, Curitiba-PR
+              </p>
+            </li>
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2005-2006
+                  <br />
+                  ELECTRICAL ENGINEERING
+                </span>
+                <br />
+                Positivo University, Curitiba-PR
+              </p>
+            </li>
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  1997-2000
+                  <br />
+                  ELECTRONICS
+                </span>
+                <br />
+                Federal University of Technology - Paraná (UTFPR)
+              </p>
+            </li>
+          </ul>
         </Col>
       </Row>
 
-      <Row className="mt-5">
-        <Col md="3">
+      <Row className="my-5">
+        <Col lg="3">
           <h2 className="resume__title">
             work
             <br />
@@ -78,71 +81,90 @@ const Resume = () => (
         </Col>
 
         <Col className="mx-auto">
-          <div className="resume__subtitle">
-            2017-Present
-            <br />
-            FREELANCE FRONT-END DEVELOPER
-          </div>
-          <br />
-          <div className="resume__subtitle">
-            2009-2017
-            <br />
-            CO-FOUNDER & DEVELOPMENT MANAGER
-          </div>
-          UNBOX Learning Experience
-          <br />
-          <br />
-          <div className="resume__subtitle">
-            2007-2009
-            <br />
-            LEAD WEB DEVELOPER
-          </div>
-          GPAC Comunicação Integrada
-          <br />
-          <br />
-          <div className="resume__subtitle">
-            2005-2007
-            <br />
-            E-LEARNING DEVELOPER
-          </div>
-          HSBC Bank Brasil
-          <br />
-          <br />
-          <div className="resume__subtitle">
-            2001-2005
-            <br />
-            WEB/ACTIONSCRIPT DEVELOPER
-          </div>
-          GPAC Comunicação Integrada
+          <ul className="timeline">
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2017-Present
+                  <br />
+                  FREELANCE FRONT-END DEVELOPER
+                </span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2009-2017
+                  <br />
+                  CO-FOUNDER & DEVELOPMENT MANAGER
+                </span>
+                <br />
+                UNBOX Learning Experience
+              </p>
+            </li>
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2007-2009
+                  <br />
+                  LEAD WEB DEVELOPER
+                </span>
+                <br />
+                GPAC Comunicação Integrada
+              </p>
+            </li>
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2005-2007
+                  <br />
+                  E-LEARNING DEVELOPER
+                </span>
+                <br />
+                HSBC Bank Brasil
+              </p>
+            </li>
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2001-2005
+                  <br />
+                  WEB/ACTIONSCRIPT DEVELOPER
+                </span>
+                <br />
+                GPAC Comunicação Integrada
+              </p>
+            </li>
+          </ul>
         </Col>
       </Row>
 
-      <Row className="mt-5">
-        <Col md="3">
-          <h2 className="resume__title">skills</h2>
+      <Row className="my-5">
+        <Col lg="3">
+          <h2 className="resume__title">hard skills</h2>
         </Col>
 
-        <Col md={{ size: 9, offset: 0 }}>
+        <Col lg={{ size: 9, offset: 0 }}>
           <span className="resume__subtitle">PROGRAMMING/LANGUAGES</span>
           <p>AS3, JS, HTML, CSS, SCSS, PHP, Java, SQL, OOP, UML</p>
         </Col>
 
-        <Col md={{ size: 9, offset: 3 }}>
+        <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">FRAMEWORKS/LIBRARIES</span>
           <p>jQuery, BackboneJS, ReactJS, Bootstrap, GSAP</p>
         </Col>
 
-        <Col md={{ size: 9, offset: 3 }}>
+        <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">SERVER-SIDE/CLOUD</span>
           <p>Linux, LAMP, AWS, EC2</p>
         </Col>
 
-        <Col md={{ size: 9, offset: 3 }}>
+        <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">DEV TOOLS/IDE</span>
           <p>Sublime Text, VS Code, IntelliJ IDEA</p>
         </Col>
 
-        <Col md={{ size: 9, offset: 3 }}>
+        <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">DESIGN TOOLS</span>
           <p>
             Photoshop, Illustrator, Flash/Animate, Sketch, Gravit Designer,
@@ -150,19 +172,37 @@ const Resume = () => (
           </p>
         </Col>
 
-        <Col md={{ size: 9, offset: 3 }}>
+        <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">E-LEARNING TOOLS</span>
           <p>Adobe Captivate, Articulate Storyline, Moodle LMS</p>
         </Col>
 
-        <Col md={{ size: 9, offset: 3 }}>
+        <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">VERSION CONTROL</span>
           <p>SVN, GIT (Github, Bitbucket)</p>
         </Col>
 
-        <Col md={{ size: 9, offset: 3 }}>
+        <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">MANAGEMENT</span>
           <p>Trello, Toggl, Microsoft Project, Merlin Project</p>
+        </Col>
+      </Row>
+
+      <Row className="my-5">
+        <Col lg="3">
+          <h2 className="resume__title">soft skills</h2>
+        </Col>
+
+        <Col lg={{ size: 9, offset: 0 }}>
+          <ul>
+            <li>Flexibility</li>
+            <li>Communication</li>
+            <li>Teamworking</li>
+            <li>Attention to Detail</li>
+            <li>Self-Starter Attitude</li>
+            <li>Analytical and Problem Solver</li>
+            <li>Quality-oriented</li>
+          </ul>
         </Col>
       </Row>
     </Container>

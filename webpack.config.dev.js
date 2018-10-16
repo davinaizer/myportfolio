@@ -56,7 +56,7 @@ module.exports = {
     strictExportPresence: true,
     rules: [
       {
-        test: /\.(png|jp(e*)g|svg)$/,
+        test: /\.(pdf|png|jp(e*)g|svg)$/,
         use: [
           {
             loader: 'url-loader',

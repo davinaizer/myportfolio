@@ -16,8 +16,8 @@ const Resume = () => (
         </Col>
       </Row>
 
-      <Row>
-        <Col lg="12" className="my-5">
+      <Row className="">
+        <Col lg="12">
           <a href={pdfFile} target="_blank" rel="noopener noreferrer">
             <Button className="secondary btn-download">
               Download CV
@@ -25,8 +25,10 @@ const Resume = () => (
             </Button>
           </a>
         </Col>
+      </Row>
 
-        <Col lg="3" className="my-3">
+      <Row className="my-5">
+        <Col lg="3">
           <h2 className="resume__title">education</h2>
         </Col>
 
@@ -69,8 +71,8 @@ const Resume = () => (
         </Col>
       </Row>
 
-      <Row>
-        <Col lg="3" className="my-5">
+      <Row className="my-5">
+        <Col lg="3">
           <h2 className="resume__title">
             work
             <br />
@@ -137,8 +139,8 @@ const Resume = () => (
         </Col>
       </Row>
 
-      <Row>
-        <Col lg="3" className="my-5">
+      <Row className="my-5">
+        <Col lg="3">
           <h2 className="resume__title">hard skills</h2>
         </Col>
 
@@ -186,8 +188,8 @@ const Resume = () => (
         </Col>
       </Row>
 
-      <Row>
-        <Col lg="3" className="my-5">
+      <Row className="my-5">
+        <Col lg="3">
           <h2 className="resume__title">soft skills</h2>
         </Col>
 

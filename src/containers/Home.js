@@ -12,20 +12,18 @@ const Home = () => (
           <h1 className="mb-2">DAVI NAIZER</h1>
           <hr className="title__separator ml-0" />
           <h2 className="mx-auto my-5">
-            E-learning Developer
-            <br />
+            E-learning &<br />
             Front-end Developer
           </h2>
           <p>
-            Hi. Iʼm Davi Naizer, a problem solver who loves helping people come
-            up with ideas and solutions.
-          </p>
-          <p>
-            Iʼve been developing web and e-learning content for almost 18 years
-            now. Iʼve worked on many projects throughout these years along
-            leading companies like Kraft Foods, Electrolux, Volvo Motors, HSBC
-            Bank, Furukawa Electric, GP Strategies, Metlife, Boticário Group and
-            many others.
+            Hi, Iʼve been developing web and e-learning content for almost 18
+            years now. Throughout these years I had the pleasure to work on many
+            projects along leading companies like Kraft Foods, Electrolux, Volvo
+            Motors, HSBC Bank, Furukawa Electric, GP Strategies, Metlife,
+            Boticário Group and many others.
+            <br />
+            <br />
+            Please feel free to navigate and know more about my work.
           </p>
           <Link to="/about">
             <Button className="home__btn" color="primary" size="lg">

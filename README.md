@@ -1,7 +1,18 @@
-# myportfolio
+# My Portfolio
 
-A simple website built from scratch (no boilerplates, for the purpose of learning) using Webpack 4, ES6, ReactJS, SCSS, and Bootstrap 4. 
+You can check the project running at: https://davinaizer.github.io/myportfolio/
 
-I'll update it with new features anytime soon. Feel free to stop by again.
+## Description
 
-You can check the project at: https://davinaizer.github.io/myportfolio/
+A simple SPA built from scratch (no boilerplates, for the purpose of learning) using Webpack 4, Babel, ES6, ReactJS, SASS, and Bootstrap 4.
+
+From time to time I will update with new things.
+Here's a list of some planned features:
+
+- [ ] Implement Unit testing (JEST)
+- [ ] Work Section: Add new projects
+- [ ] Work Section: Add filter by tags
+- [x] Resume Section: Add Curriculum PDF for download
+- [ ] Page transitions
+- [ ] Store Work Section data on a DB
+- [ ] Implement MongoDB + ExpressJS + NodeJS

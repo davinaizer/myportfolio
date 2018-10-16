@@ -4555,6 +4555,43 @@ section {
   background-repeat: no-repeat, repeat, no-repeat;
   background-size: auto, auto, cover;
   min-height: 100vh; }
+  .resume-section ul {
+    list-style-type: none;
+    padding: 0; }
+    .resume-section ul li {
+      line-height: 200%; }
+  .resume-section ul.timeline {
+    list-style-type: none;
+    position: relative; }
+  .resume-section ul.timeline:before {
+    content: ' ';
+    background: #30353a;
+    display: inline-block;
+    position: absolute;
+    left: -1px;
+    width: 2px;
+    height: 100%;
+    z-index: 400; }
+  .resume-section ul.timeline > li {
+    margin: 30px;
+    padding-left: 0; }
+  .resume-section ul.timeline > li:before {
+    content: ' ';
+    background: #cfc4b2;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #30353a;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    z-index: 500;
+    margin-top: 10px; }
+  .resume-section .btn-download {
+    padding: 10px 15px; }
+    .resume-section .btn-download img {
+      margin-left: 15px;
+      height: 20px; }
 
 .resume__title {
   color: #ff3454;

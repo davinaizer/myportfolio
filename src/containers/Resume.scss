@@ -8,6 +8,24 @@
   background-size: auto, auto, cover;
 
   min-height: 100vh;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      line-height: 200%;
+    }
+  }
+
+  .btn-download {
+    padding: 10px 15px;
+
+    img {
+      margin-left: 15px;
+      height: 20px;
+    }
+  }
 }
 
 .resume__title {

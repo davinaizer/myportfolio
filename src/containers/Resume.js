@@ -29,50 +29,6 @@ const Resume = () => (
 
       <Row className="my-5">
         <Col lg="3">
-          <h2 className="resume__title">education</h2>
-        </Col>
-
-        <Col className="mx-auto">
-          <ul className="timeline">
-            <li>
-              <p>
-                <span className="resume__subtitle">
-                  2007-2010
-                  <br />
-                  COMPUTER ENGINEERING
-                </span>
-                <br />
-                Positivo University, Curitiba-PR
-              </p>
-            </li>
-            <li>
-              <p>
-                <span className="resume__subtitle">
-                  2005-2006
-                  <br />
-                  ELECTRICAL ENGINEERING
-                </span>
-                <br />
-                Positivo University, Curitiba-PR
-              </p>
-            </li>
-            <li>
-              <p>
-                <span className="resume__subtitle">
-                  1997-2000
-                  <br />
-                  ELECTRONICS
-                </span>
-                <br />
-                Federal University of Technology - Paraná (UTFPR)
-              </p>
-            </li>
-          </ul>
-        </Col>
-      </Row>
-
-      <Row className="my-5">
-        <Col lg="3">
           <h2 className="resume__title">
             work
             <br />
@@ -133,6 +89,50 @@ const Resume = () => (
                 </span>
                 <br />
                 GPAC Comunicação Integrada
+              </p>
+            </li>
+          </ul>
+        </Col>
+      </Row>
+
+      <Row className="my-5">
+        <Col lg="3">
+          <h2 className="resume__title">education</h2>
+        </Col>
+
+        <Col className="mx-auto">
+          <ul className="timeline">
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2007-2010
+                  <br />
+                  COMPUTER ENGINEERING
+                </span>
+                <br />
+                Positivo University, Curitiba-PR
+              </p>
+            </li>
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2005-2006
+                  <br />
+                  ELECTRICAL ENGINEERING
+                </span>
+                <br />
+                Positivo University, Curitiba-PR
+              </p>
+            </li>
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  1997-2000
+                  <br />
+                  ELECTRONICS
+                </span>
+                <br />
+                Federal University of Technology - Paraná (UTFPR)
               </p>
             </li>
           </ul>

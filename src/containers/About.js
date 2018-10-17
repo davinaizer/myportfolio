@@ -26,7 +26,7 @@ const About = () => (
             different languages and tools: ActionScript 3, Java, ASP, PHP, SQL,
             Javascript, among others. AS3 and JS being the ones I used the most
             throughout the years. Having worked closely with different
-            professionals such as UX/UI designers, instrucional designers,
+            professionals such as UX/UI designers, instructional designers,
             copywriters, frontend and backend developers, I acquired valuable
             knowledge on how to combine technical, business and user
             requirements into creative and efficient products.
@@ -39,7 +39,7 @@ const About = () => (
             Group. During this time I developed a broad range of skills:
             team-leading, mentoring, project management, entrepreneurship,
             finances, accounting, business laws and others. For more than 7
-            years, I planned, collaborated with teams and managed thousands of
+            years, I planned, collaborated with teams and managed hundreds of
             successful e-learning, web and digital design projects with great
             commitment to deliver high-quality designs and products to the
             customers.

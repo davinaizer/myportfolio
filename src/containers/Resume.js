@@ -29,50 +29,6 @@ const Resume = () => (
 
       <Row className="my-5">
         <Col lg="3">
-          <h2 className="resume__title">education</h2>
-        </Col>
-
-        <Col className="mx-auto">
-          <ul className="timeline">
-            <li>
-              <p>
-                <span className="resume__subtitle">
-                  2007-2010
-                  <br />
-                  COMPUTER ENGINEERING
-                </span>
-                <br />
-                Positivo University, Curitiba-PR
-              </p>
-            </li>
-            <li>
-              <p>
-                <span className="resume__subtitle">
-                  2005-2006
-                  <br />
-                  ELECTRICAL ENGINEERING
-                </span>
-                <br />
-                Positivo University, Curitiba-PR
-              </p>
-            </li>
-            <li>
-              <p>
-                <span className="resume__subtitle">
-                  1997-2000
-                  <br />
-                  ELECTRONICS
-                </span>
-                <br />
-                Federal University of Technology - Paraná (UTFPR)
-              </p>
-            </li>
-          </ul>
-        </Col>
-      </Row>
-
-      <Row className="my-5">
-        <Col lg="3">
           <h2 className="resume__title">
             work
             <br />
@@ -141,12 +97,56 @@ const Resume = () => (
 
       <Row className="my-5">
         <Col lg="3">
+          <h2 className="resume__title">education</h2>
+        </Col>
+
+        <Col className="mx-auto">
+          <ul className="timeline">
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2007-2010
+                  <br />
+                  COMPUTER ENGINEERING
+                </span>
+                <br />
+                Positivo University, Curitiba-PR
+              </p>
+            </li>
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  2005-2006
+                  <br />
+                  ELECTRICAL ENGINEERING
+                </span>
+                <br />
+                Positivo University, Curitiba-PR
+              </p>
+            </li>
+            <li>
+              <p>
+                <span className="resume__subtitle">
+                  1997-2000
+                  <br />
+                  ELECTRONICS
+                </span>
+                <br />
+                Federal University of Technology - Paraná (UTFPR)
+              </p>
+            </li>
+          </ul>
+        </Col>
+      </Row>
+
+      <Row className="my-5">
+        <Col lg="3">
           <h2 className="resume__title">hard skills</h2>
         </Col>
 
         <Col lg={{ size: 9, offset: 0 }}>
           <span className="resume__subtitle">PROGRAMMING/LANGUAGES</span>
-          <p>AS3, JS, HTML, CSS, SCSS, PHP, Java, SQL, OOP, UML</p>
+          <p>AS3, JS, HTML, CSS, SASS, PHP, Java, SQL, OOP, UML</p>
         </Col>
 
         <Col lg={{ size: 9, offset: 3 }}>
@@ -166,10 +166,7 @@ const Resume = () => (
 
         <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">DESIGN TOOLS</span>
-          <p>
-            Photoshop, Illustrator, Flash/Animate, Sketch, Gravit Designer,
-            Inkscape
-          </p>
+          <p>Photoshop, Illustrator, Flash/Animate, Sketch, Gravit Designer</p>
         </Col>
 
         <Col lg={{ size: 9, offset: 3 }}>

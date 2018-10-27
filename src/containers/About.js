@@ -33,7 +33,7 @@ const About = () => (
             <br />
             <br />
             After 8 years working in web development and e-learning industry, I
-            started my own company in 2009, through which I have the pleasure to
+            started my own company in 2009, through which I had the pleasure to
             work with companies such as Kraft Foods, Electrolux, Volvo Motors,
             HSBC Bank, Furukawa Electric, GP Strategies, Metlife, Boticário
             Group. During this time I developed a broad range of skills:

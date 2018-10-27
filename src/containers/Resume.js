@@ -146,7 +146,7 @@ const Resume = () => (
 
         <Col lg={{ size: 9, offset: 0 }}>
           <span className="resume__subtitle">PROGRAMMING/LANGUAGES</span>
-          <p>AS3, JS, HTML, CSS, SCSS, PHP, Java, SQL, OOP, UML</p>
+          <p>AS3, JS, HTML, CSS, SASS, PHP, Java, SQL, OOP, UML</p>
         </Col>
 
         <Col lg={{ size: 9, offset: 3 }}>
@@ -166,10 +166,7 @@ const Resume = () => (
 
         <Col lg={{ size: 9, offset: 3 }}>
           <span className="resume__subtitle">DESIGN TOOLS</span>
-          <p>
-            Photoshop, Illustrator, Flash/Animate, Sketch, Gravit Designer,
-            Inkscape
-          </p>
+          <p>Photoshop, Illustrator, Flash/Animate, Sketch, Gravit Designer</p>
         </Col>
 
         <Col lg={{ size: 9, offset: 3 }}>

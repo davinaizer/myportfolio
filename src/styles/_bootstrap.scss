@@ -1,10 +1,4 @@
-@charset 'utf-8';
-
-// App Theme - Boostrap Customization
-@import 'styles/theme';
-
-// ----  VENDORS
-// @import '~bootstrap/scss/bootstrap';
+// Custom Bootstrap
 
 // Required
 @import '~bootstrap/scss/functions';
@@ -23,4 +17,3 @@
 @import '~bootstrap/scss/utilities';
 @import '~bootstrap/scss/transitions';
 @import '~bootstrap/scss/carousel';
-// ----  VENDORS

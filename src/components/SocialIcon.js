@@ -6,7 +6,7 @@ import './SocialIcon.scss';
 const SocialIcon = ({ icon, href }) => (
   <div className="social__icon">
     <a href={href} target="_blank" rel="noopener noreferrer">
-      <img src={icon} />
+      <img src={icon} alt="" />
     </a>
   </div>
 );

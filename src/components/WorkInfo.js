@@ -20,12 +20,13 @@ const WorkInfo = ({ match }) => {
 
     const createMarkup = value => ({ __html: value });
 
+    // TODO Separate into another Component
     const getWorkSection = workItem => {
         const { title, description, images, links, tags } = workItem;
         const publicPatch = process.env.NODE_ENV === 'production' ? '/react-portfolio' : '';
         const gallery = images.gallery.map(item => ({
             src: publicPatch + item,
-            caption: '',
+            caption: ''
         }));
 
         return (
@@ -65,13 +66,13 @@ const WorkInfo = ({ match }) => {
 
     return (
         <section id="work-info" className="work-info-section">
-            {filteredWorks.length >= 1 && getWorkSection(filteredWorks[0])};
+            {filteredWorks.length >= 1 && getWorkSection(filteredWorks[0])}
         </section>
     );
 };
 
 WorkInfo.propTypes = {
-    match: PropTypes.shape({}).isRequired,
+    match: PropTypes.shape({}).isRequired
 };
 
 export default WorkInfo;

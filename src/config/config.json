@@ -1,0 +1,154 @@
+{
+    "works": [
+        {
+            "id": 0,
+            "title": "My Portfolio",
+            "summary": "A simple SPA built from scratch (no boilerplates, for the purpose of learning) using Webpack 4, ES6, Babel, ReactJS, SASS and Bootstrap. I will update with new features and content in the near future, so feel free to stop by again.",
+            "description": "A simple SPA built from scratch (no boilerplates, for the purpose of learning) using Webpack 4, ES6, Babel, ReactJS,  SASS and Bootstrap. I will update with new features and content in the near future, so feel free to stop by again.",
+            "images": {
+                "thumb": "/images/naizer_portfolio_thumb.jpg",
+                "gallery": [
+                    "/images/works/naizer_portfolio_0.jpg",
+                    "/images/works/naizer_portfolio_1.jpg",
+                    "/images/works/naizer_portfolio_2.jpg",
+                    "/images/works/naizer_portfolio_3.jpg",
+                    "/images/works/naizer_portfolio_4.jpg"
+                ]
+            },
+            "links": [
+                {
+                    "label": "Project Repo",
+                    "url": "https://github.com/davinaizer/myportfolio"
+                }
+            ],
+            "tags": ["HTML", "JS", "SASS", "ES6", "Babel", "ReactJS", "Webpack", "Bootstrap", "GitHub"]
+        },
+        {
+            "id": 1,
+            "title": "E-book Framework AS3",
+            "summary": "When Flash and ActionScript was the king of multimedia and RIA (Rich Internet Application), this was the main project at UNBOX (my former company), the heart of the development team.",
+            "description": "When Flash and ActionScript was the king of multimedia and RIA (Rich Internet Application), this was the main project at UNBOX, the heart of the development team. It was designed to improve in many ways how we made online learning. Before the framework, a 60-minute long course took almost 3 to 4 months to be complete, including all development stages: briefing, planning, content capturing, instructional design, scripting, UI/UX design, front-end development, sequencing, navigation and LMS/SCORM server communication. After the framework was implemented, we decreased the time spent to have a finished product in 3 to 4 weeks. From a technical and financial point of view, it was a great achievement.<br/><br/>The framework was built using Actionscript 3, OOP (object-oriented programming), design patterns/best practices and MVCS architecture (Model-View -Controller-Service, based on Robotlegs Framework).<br/><br/>Later, this framework was ported to HAXE (ported by Tiago Ling) and to JS (by me).<br/><br/>Just to list some available features: <ul>  <li>Navigation and Sequencing configuration in XML;</li>  <li>Page and content animation in XML (XML translation to GSAP animations)</li>  <li>Content creation, positioning, and styling using XML. This is particularly relevant because we are talking about Flash/AS, which had very limited HTML and CSS support;</li>  <li>Content search engine;</li>  <li>Page bookmark;</li>  <li>A library of lessons, components, mini-games, assessment system, etc. </li>  <li>Many routines were automated using JSFL: image optimization, text extraction (from Flash files to XML), stylesheet creation (based on Flash template files created by the design team), app scaffolding (file generation based on XML configuration file). This was done much before task runners like GULP or GRUNT become famous.</li></ul><br/>In the latest version of the framework, we even used SASS to create a theming system like Bootstrap and improve the customization.  At that time, these things were amazing in the Flash/Actionscript world.",
+            "images": {
+                "thumb": "/images/ebookas_thumb.jpg",
+                "gallery": [
+                    "/images/works/ebookas_01.jpg",
+                    "/images/works/ebookas_02.jpg",
+                    "/images/works/ebookas_03.jpg",
+                    "/images/works/ebookas_04.jpg"
+                ]
+            },
+            "links": [
+                {
+                    "label": "Live Preview",
+                    "url": "http://davinaizer.atwebpages.com/ebook-as3/"
+                },
+                {
+                    "label": "Live Demo",
+                    "url": "http://davinaizer.atwebpages.com/proj_432_15_financas_pessoais/"
+                },
+                {
+                    "label": "Project Repo - GIT",
+                    "url": "https://github.com/davinaizer/ebook-as3"
+                }
+            ],
+            "tags": ["AS3", "SASS", "JSFL", "GSAP", "SCORM", "OOP", "MVCS"]
+        },
+        {
+            "id": 2,
+            "title": "E-book Framework JS",
+            "summary": "In 2014 the AS3 version of the framework was fully redesigned in HTML and JS using BackboneJS and Babel. Due to the nature of JS and HTML, the project had a simpler architecture compared to the original made in AS3.",
+            "description": "In 2014 the AS3 version of the framework was fully redesigned in HTML and JS using BackboneJS and Babel. Due to the nature of JS and HTML, the project had a simpler architecture compared to the original made in AS3.<br/><br/>This new version of the framework had a different approach and concept. It was designed to replace the AS3 version and to be compatible with all devices, not only desktop like the previous. To ease the transition from AS3 and build a responsive version we adopted Bootstrap as the CSS framework, Hanbldebars for HTML templating and BackboneJS to keep a similar architecture (MVC).",
+            "images": {
+                "thumb": "/images/ebookjs_thumb.jpg",
+                "gallery": [
+                    "/images/works/gestaodotempo_0.jpg",
+                    "/images/works/gestaodotempo_1.jpg",
+                    "/images/works/gestaodotempo_2.jpg",
+                    "/images/works/gestaodotempo_3.jpg",
+                    "/images/works/gestaodotempo_4.jpg",
+                    "/images/works/gestaodotempo_5.jpg",
+                    "/images/works/gestaodotempo_6.jpg",
+                    "/images/works/gestaodotempo_7.jpg",
+                    "/images/works/multiplicadores_quiz_0.jpg",
+                    "/images/works/multiplicadores_quiz_1.jpg",
+                    "/images/works/multiplicadores_quiz_2.jpg",
+                    "/images/works/multiplicadores_quiz_3.jpg"
+                ]
+            },
+            "links": [
+                {
+                    "label": "Project Repo - GIT",
+                    "url": "https://github.com/davinaizer/ebook-js"
+                },
+                {
+                    "label": "Live Preview",
+                    "url": "http://davinaizer.atwebpages.com/ebook-js/"
+                },
+                {
+                    "label": "Live Demo 1",
+                    "url": "http://davinaizer.atwebpages.com/proj_501_16.3_treinamento_multiplicadores/"
+                },
+                {
+                    "label": "Live Demo 2",
+                    "url": "http://davinaizer.atwebpages.com/proj_435_15_up_gestaodotempo/"
+                },
+                {
+                    "label": "Live Demo 3",
+                    "url": "http://davinaizer.atwebpages.com/proj_433_15_up_apresentacoes/"
+                },
+                {
+                    "label": "Live Demo - Quiz",
+                    "url": "http://davinaizer.atwebpages.com/proj_501_16.3_treinamento_multiplicadores_quiz/"
+                }
+            ],
+            "tags": ["HTML", "SASS", "JS", "ES6", "BackboneJS", "Bootstrap", "Gulp", "Webpack"]
+        },
+        {
+            "id": 3,
+            "title": "Website // UNBOX",
+            "summary": "A single page website built using Bootstrap as CSS Framework, RequireJS, jQuery and Gulp as task runner.",
+            "description": "A single page website built using Bootstrap as CSS Framework, RequireJS, jQuery and Gulp as task runner.",
+            "images": {
+                "thumb": "/images/unbox_website_thumb.jpg",
+                "gallery": [
+                    "/images/works/unbox_website_0.jpg",
+                    "/images/works/unbox_website_1.jpg",
+                    "/images/works/unbox_website_2.jpg",
+                    "/images/works/unbox_website_3.jpg",
+                    "/images/works/unbox_website_4.jpg",
+                    "/images/works/unbox_website_5.jpg",
+                    "/images/works/unbox_website_6.jpg"
+                ]
+            },
+            "links": [
+                {
+                    "label": "Live Preview",
+                    "url": "http://davinaizer.atwebpages.com/unbox_website/"
+                },
+                {
+                    "label": "Project Repo",
+                    "url": "https://github.com/davinaizer/unbox_website"
+                }
+            ],
+            "tags": ["HTML", "SASS", "JS", "ES6", "BackboneJS", "Bootstrap", "Gulp", "Webpack"]
+        },
+        {
+            "id": 4,
+            "title": "FOLKS LMS",
+            "summary": "FOLKS LMS is a Learning Management System based on the open-source LMS project Moodle.  This project was built during my time at my former company, UNBOX.",
+            "description": "FOLKS LMS is a Learning Management System based on the open-source LMS project Moodle.  This project was built during my time at my former company, UNBOX. It was designed to be a cost-effective solution in a very competing market. To achieve that, we focused on reducing infrastructure costs.<br /><br />For the interface side, we created a template-based approach using Bootstrap. The templates were created by the design/UX team, and I was responsible for implementing using Bootstrap, JS, and SASS.<br /><br />As for the infrastructure, I was responsible for building a web server using AWS EC2 and Ubuntu Server. There were some production-ready instances on AWS Marketplace, but they tend to cost a lot in the long-term. To reduce costs, we choose the free-tier (t2.micro) instance from AWS and would scale the instance according to inbound traffic.<br /><br />The server was setup using Linux Ubuntu, Apache, MySQL and PHP (LAMP) and a lot of others tailor-made configurations to boost performance, security, and flexibility.",
+            "images": {
+                "thumb": "/images/folkslms_thumb.jpg",
+                "gallery": [
+                    "/images/works/folkslms_0.jpg",
+                    "/images/works/folkslms_1.jpg",
+                    "/images/works/folkslms_2.jpg",
+                    "/images/works/folkslms_3.jpg",
+                    "/images/works/folkslms_4.jpg"
+                ]
+            },
+            "links": [],
+            "tags": ["HTML", "SASS", "JS", "Bootstrap", "AWS", "EC2", "Ubuntu", "LAMP", "Webmin", "e-Learning"]
+        }
+    ]
+}

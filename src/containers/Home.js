@@ -23,7 +23,7 @@ const Home = () => (
             Boticário Group and many others.
             <br />
             <br />
-            Please feel free to navigate and know more about my work.
+            Please feel free to navigate and get to know more about me.
           </p>
           <Link to="/about">
             <Button className="home__btn" color="primary" size="lg">

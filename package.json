@@ -1,52 +1,58 @@
 {
-  "name": "react-portfolio",
-  "version": "0.1.0",
-  "private": false,
-  "homepage": "https://davinaizer.github.io/react-portfolio/",
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.1.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.0.1",
-    "reactstrap": "^8.0.0",
-    "redux": "^4.0.1",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "styled-components": "4.3.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all",
-    "ie 10"
-  ],
-  "devDependencies": {
-    "coveralls": "3.0.4",
-    "enzyme": "3.10.0",
-    "enzyme-adapter-react-16": "1.14.0",
-    "react-test-renderer": "^16.8.6"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!/node_modules/",
-      "!src/index.js",
-      "!src/serviceWorker.js"
-    ]
-  }
+    "name": "react-portfolio",
+    "version": "0.1.0",
+    "private": false,
+    "homepage": "https://davinaizer.github.io/react-portfolio/",
+    "dependencies": {
+        "bootstrap": "^4.3.1",
+        "node-sass": "^4.12.0",
+        "react": "^16.10.2",
+        "react-dom": "^16.10.2",
+        "react-redux": "^7.1.0",
+        "react-router-dom": "^5.0.1",
+        "react-scripts": "3.2.0",
+        "reactstrap": "^8.0.0",
+        "redux": "^4.0.1",
+        "redux-devtools-extension": "^2.13.8",
+        "redux-logger": "^3.0.6",
+        "redux-thunk": "^2.3.0",
+        "styled-components": "4.4.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not ie <= 11",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "coveralls": "3.0.7",
+        "enzyme": "3.10.0",
+        "enzyme-adapter-react-16": "1.15.1",
+        "react-test-renderer": "^16.8.6"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx}",
+            "!/node_modules/",
+            "!src/index.js",
+            "!src/serviceWorker.js"
+        ]
+    }
 }

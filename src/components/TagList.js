@@ -4,6 +4,8 @@ import styled from 'styled-components/macro';
 
 import { colors } from '../styles/theme';
 
+const TagListWrapper = styled.div``;
+
 const TagListContainer = styled.ul`
     list-style-type: none;
     margin: 0;
@@ -21,11 +23,13 @@ const TagListItem = styled.li`
 `;
 
 const TagList = ({ items }) => (
-    <TagListContainer>
-        {items.map((item, index) => (
-            <TagListItem key={index}>{item}</TagListItem>
-        ))}
-    </TagListContainer>
+    <TagListWrapper>
+        <TagListContainer>
+            {items.map((item, index) => (
+                <TagListItem key={index}>{item}</TagListItem>
+            ))}
+        </TagListContainer>
+    </TagListWrapper>
 );
 
 TagList.propTypes = {

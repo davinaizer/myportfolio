@@ -1,40 +1,80 @@
 import React from 'react';
-import { Button, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Button, Col, Row } from 'reactstrap';
+import styled, { css } from 'styled-components';
+
+import { colors } from '../styles/theme';
 import TagList from './TagList';
 
-import './WorkItem.scss';
+const WorkItemContainer = styled(Row)`
+    background-color: ${colors.charcoal};
+    margin-top: 50px;
+`;
 
-const publicPatch = process.env.NODE_ENV === 'production' ? '/react-portfolio' : '.';
+const WorkItemThumb = styled.div`
+    img {
+        height: 100%;
+        width: 100%;
+    }
+`;
+
+const WorkItemButton = styled(Button)`
+    font-size: 12px;
+    padding: 5px 10px;
+`;
+
+const Title = styled.p`
+    color: ${colors.sizzlingRed};
+    font-weight: bold;
+`;
+
+const Body = styled.p``;
+
+const WorkItemCard = styled.div`
+    height: 100%;
+    min-height: 330px;
+    padding: 30px;
+    width: 100%;
+
+    ${({ isFlipped }) =>
+        isFlipped &&
+        css`
+            border: 0;
+            margin-left: 4px;
+        `}
+`;
+
+const StyledTagList = styled(TagList)`
+    bottom: 15px;
+    position: absolute;
+`;
 
 const WorkItem = ({ id, thumb, title, summary, tags, isFlipped }) => (
-    <Row noGutters className="work-item">
+    <WorkItemContainer noGutters>
         <Col md="6">
-            <div className="work-item__thumb">
+            <WorkItemThumb>
                 <Link to={'/work/' + id}>
-                    <img src={publicPatch + thumb} alt={title} />
+                    <img src={process.env.PUBLIC_URL + thumb} alt={title} />
                 </Link>
-            </div>
+            </WorkItemThumb>
         </Col>
 
         <Col md="6" className={isFlipped && 'order-md-first'}>
-            <div className={'work-item__card ' + (isFlipped && ' work-item__card--flipped')}>
-                <div className="text-lg-left">
-                    <p className="work-item__title">{title}</p>
-                    <p className="work-item__body small">{summary}</p>
-                </div>
+            <WorkItemCard isFlipped={isFlipped}>
+                <Title>{title}</Title>
+                <Body className="small">{summary}</Body>
 
                 <Link to={'/work/' + id}>
-                    <Button className="work-item__btn" size="sm" color="secondary">
+                    <WorkItemButton size="sm" color="secondary">
                         MORE INFO
-                    </Button>
+                    </WorkItemButton>
                 </Link>
 
-                <TagList items={tags} />
-            </div>
+                <StyledTagList items={tags} />
+            </WorkItemCard>
         </Col>
-    </Row>
+    </WorkItemContainer>
 );
 
 WorkItem.propTypes = {
@@ -43,7 +83,7 @@ WorkItem.propTypes = {
     title: PropTypes.string,
     summary: PropTypes.string,
     tags: PropTypes.object,
-    isFlipped: PropTypes.bool,
+    isFlipped: PropTypes.bool
 };
 
 export default WorkItem;

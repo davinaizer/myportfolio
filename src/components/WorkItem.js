@@ -32,8 +32,11 @@ const Title = styled.p`
 const Body = styled.p``;
 
 const WorkItemCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     height: 100%;
-    min-height: 330px;
     padding: 30px;
     width: 100%;
 
@@ -46,8 +49,7 @@ const WorkItemCard = styled.div`
 `;
 
 const StyledTagList = styled(TagList)`
-    bottom: 15px;
-    position: absolute;
+    margin-top: 15px;
 `;
 
 const WorkItem = ({ id, thumb, title, summary, tags, isFlipped }) => (
@@ -62,16 +64,17 @@ const WorkItem = ({ id, thumb, title, summary, tags, isFlipped }) => (
 
         <Col md="6" className={isFlipped && 'order-md-first'}>
             <WorkItemCard isFlipped={isFlipped}>
-                <Title>{title}</Title>
-                <Body className="small">{summary}</Body>
+                <div>
+                    <Title>{title}</Title>
+                    <Body className="small">{summary}</Body>
 
-                <Link to={'/work/' + id}>
-                    <WorkItemButton size="sm" color="secondary">
-                        MORE INFO
-                    </WorkItemButton>
-                </Link>
-
-                <StyledTagList items={tags} />
+                    <Link to={'/work/' + id}>
+                        <WorkItemButton size="sm" color="secondary">
+                            MORE INFO
+                        </WorkItemButton>
+                    </Link>
+                </div>
+                <StyledTagList size="small" items={tags} />
             </WorkItemCard>
         </Col>
     </WorkItemContainer>

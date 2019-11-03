@@ -1,10 +1,24 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import styled from 'styled-components/macro';
+import { rgba } from 'polished';
 
-import './About.scss';
+import { colors } from '../styles/theme';
+import noiseBg from '../assets/black_noise_50.png';
+import sectionBg from '../assets/about-bg.jpg';
+
+const AboutSection = styled.section`
+    background-attachment: fixed;
+    background-image: linear-gradient(${rgba(colors.black, 0)}, ${rgba(colors.black, 1)}), url(${noiseBg}),
+        url(${sectionBg});
+
+    background-position: center top;
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
+`;
 
 const About = () => (
-    <section id="about" className="about-section">
+    <AboutSection id="about">
         <Container>
             <Row className="justify-content-end">
                 <Col md="6">
@@ -46,7 +60,7 @@ const About = () => (
                 </Col>
             </Row>
         </Container>
-    </section>
+    </AboutSection>
 );
 
 export default About;

@@ -1,8 +1,9 @@
-import { rgba } from 'polished';
-import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import styled from 'styled-components/macro';
+import { rgba } from 'polished';
+
 
 import filterByIdAction from '../../actions/filterAction';
 import noiseBg from '../../assets/black_noise_50.png';

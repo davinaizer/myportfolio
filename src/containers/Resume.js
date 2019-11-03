@@ -1,199 +1,275 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
+import styled from 'styled-components/macro';
+import { rgba } from 'polished';
 
-import './Resume.scss';
+import { SectionTitle, TitleSeparator, colors } from '../styles/theme';
+import noiseBg from '../assets/black_noise_50.png';
+import sectionBg from '../assets/resume-bg.jpg';
 
 import pdfIcon from '../assets/file-pdf.svg';
 import pdfFile from '../assets/201810_cv_davi_naizer.pdf';
 
+const ResumeSection = styled.section`
+    background-attachment: fixed;
+    background-color: $eerie-black;
+    background-image: linear-gradient(${rgba(colors.black, 0)}, ${rgba(colors.black, 1)}), url(${noiseBg}),
+        url(${sectionBg});
+    background-position: right top;
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
+
+    min-height: 100vh;
+`;
+
+// TODO separate as a Comp
+const Timeline = styled.ul`
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+
+    li {
+        line-height: 200%;
+    }
+
+    &:before {
+        content: ' ';
+        background: ${colors.charcoal};
+        display: inline-block;
+        position: absolute;
+        left: -1px;
+        width: 2px;
+        height: 100%;
+        z-index: 400;
+    }
+
+    & > li {
+        margin: 30px;
+        padding-left: 0;
+    }
+
+    & > li:before {
+        content: ' ';
+        background: ${colors.darkVanilla};
+        display: inline-block;
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid ${colors.charcoal};
+        left: -5px;
+        width: 10px;
+        height: 10px;
+        z-index: 500;
+        margin-top: 10px;
+    }
+`;
+const DownloadButton = styled(Button)`
+    padding: 10px 15px;
+
+    img {
+        margin-left: 15px;
+        height: 20px;
+    }
+`;
+
+const ResumeTitle = styled.h2`
+    color: ${colors.sizzlingRed};
+    font-weight: bold;
+`;
+
+const ResumeSubtitle = styled.span`
+    color: ${colors.white};
+    font-weight: bold;
+`;
+
 const Resume = () => (
-    <section id="resume" className="resume-section">
-        <Container className="">
+    <ResumeSection id="resume">
+        <Container>
             <Row>
-                <Col lg="8" className="">
-                    <h2 className="section__title text-left">Resume</h2>
-                    <hr className="title__separator ml-0" />
+                <Col lg="8">
+                    <SectionTitle className="text-left">Resume</SectionTitle>
+                    <TitleSeparator className="ml-0" />
                 </Col>
             </Row>
 
-            <Row className="">
+            <Row>
                 <Col lg="12">
+                    {/* TODO separate as a Comp */}
                     <a href={pdfFile} target="_blank" rel="noopener noreferrer">
-                        <Button className="secondary btn-download">
+                        <DownloadButton className="secondary">
                             Download CV
                             <img src={pdfIcon} alt="Download Curriculum - PDF" />
-                        </Button>
+                        </DownloadButton>
                     </a>
                 </Col>
             </Row>
 
             <Row className="my-5">
                 <Col lg="3">
-                    <h2 className="resume__title">
+                    <ResumeTitle>
                         work
                         <br />
                         experience
-                    </h2>
+                    </ResumeTitle>
                 </Col>
 
                 <Col className="mx-auto">
-                    <ul className="timeline">
+                    <Timeline>
                         <li>
                             <p>
-                                <span className="resume__subtitle">
+                                <ResumeSubtitle>
                                     2019-Present
                                     <br />
                                     FRONT-END DEVELOPER
-                                </span>
+                                </ResumeSubtitle>
                                 <br />
-                                Gamesys London, UK
+                                Gamesys Group, UK, London
                             </p>
                         </li>
                         <li>
                             <p>
-                                <span className="resume__subtitle">
+                                <ResumeSubtitle>
                                     2017-2019
                                     <br />
                                     FREELANCE E-LEARNING & FRONT-END DEVELOPER
-                                </span>
+                                </ResumeSubtitle>
                             </p>
                         </li>
                         <li>
                             <p>
-                                <span className="resume__subtitle">
+                                <ResumeSubtitle>
                                     2009-2017
                                     <br />
                                     CO-FOUNDER & DEVELOPMENT MANAGER
-                                </span>
+                                </ResumeSubtitle>
                                 <br />
                                 UNBOX Learning Experience
                             </p>
                         </li>
                         <li>
                             <p>
-                                <span className="resume__subtitle">
+                                <ResumeSubtitle>
                                     2007-2009
                                     <br />
                                     LEAD WEB DEVELOPER
-                                </span>
+                                </ResumeSubtitle>
                                 <br />
                                 GPAC Comunicação Integrada
                             </p>
                         </li>
                         <li>
                             <p>
-                                <span className="resume__subtitle">
+                                <ResumeSubtitle>
                                     2005-2007
                                     <br />
                                     E-LEARNING DEVELOPER
-                                </span>
+                                </ResumeSubtitle>
                                 <br />
                                 HSBC Bank Brasil
                             </p>
                         </li>
                         <li>
                             <p>
-                                <span className="resume__subtitle">
+                                <ResumeSubtitle>
                                     2001-2005
                                     <br />
                                     WEB/ACTIONSCRIPT DEVELOPER
-                                </span>
+                                </ResumeSubtitle>
                                 <br />
                                 GPAC Comunicação Integrada
                             </p>
                         </li>
-                    </ul>
+                    </Timeline>
                 </Col>
             </Row>
 
             <Row className="my-5">
                 <Col lg="3">
-                    <h2 className="resume__title">education</h2>
+                    <ResumeTitle>education</ResumeTitle>
                 </Col>
 
                 <Col className="mx-auto">
-                    <ul className="timeline">
+                    <Timeline>
                         <li>
                             <p>
-                                <span className="resume__subtitle">
+                                <ResumeSubtitle>
                                     2007-2010
                                     <br />
                                     COMPUTER ENGINEERING
-                                </span>
+                                </ResumeSubtitle>
                                 <br />
-                                Positivo University, Brazil, Curitiba-PR
+                                Positivo University, Brazil, Curitiba-Pr
                             </p>
                         </li>
                         <li>
                             <p>
-                                <span className="resume__subtitle">
+                                <ResumeSubtitle>
                                     2005-2006
                                     <br />
                                     ELECTRICAL ENGINEERING
-                                </span>
+                                </ResumeSubtitle>
                                 <br />
-                                Positivo University, Brazil, Curitiba-PR
+                                Positivo University, Brazil, Curitiba-Pr
                             </p>
                         </li>
                         <li>
                             <p>
-                                <span className="resume__subtitle">
+                                <ResumeSubtitle>
                                     1997-2000
                                     <br />
                                     ELECTRONICS
-                                </span>
+                                </ResumeSubtitle>
                                 <br />
                                 Federal University of Technology - Brazil, Paraná (UTFPR)
                             </p>
                         </li>
-                    </ul>
+                    </Timeline>
                 </Col>
             </Row>
 
             <Row className="my-5">
                 <Col lg="3">
-                    <h2 className="resume__title">hard skills</h2>
+                    <ResumeTitle>hard skills</ResumeTitle>
                 </Col>
 
                 <Col lg={{ size: 9, offset: 0 }}>
-                    <span className="resume__subtitle">PROGRAMMING/LANGUAGES</span>
+                    <ResumeSubtitle>PROGRAMMING/LANGUAGES</ResumeSubtitle>
                     <p>AS3, JS, HTML, CSS, SASS, PHP, Java, SQL, OOP, UML</p>
                 </Col>
 
                 <Col lg={{ size: 9, offset: 3 }}>
-                    <span className="resume__subtitle">FRAMEWORKS/LIBRARIES</span>
+                    <ResumeSubtitle>FRAMEWORKS/LIBRARIES</ResumeSubtitle>
                     <p>BackboneJS, Bootstrap, React, Redux </p>
                 </Col>
 
                 <Col lg={{ size: 9, offset: 3 }}>
-                    <span className="resume__subtitle">DEV TOOLS/IDE</span>
+                    <ResumeSubtitle>DEV TOOLS/IDE</ResumeSubtitle>
                     <p>Sublime Text, VSCode, IntelliJ IDEA</p>
                 </Col>
 
                 <Col lg={{ size: 9, offset: 3 }}>
-                    <span className="resume__subtitle">DESIGN TOOLS</span>
+                    <ResumeSubtitle>DESIGN TOOLS</ResumeSubtitle>
                     <p>Photoshop, Illustrator, Flash/Animate, Adobe XD, Sketch, Zeplin</p>
                 </Col>
 
                 <Col lg={{ size: 9, offset: 3 }}>
-                    <span className="resume__subtitle">E-LEARNING TOOLS</span>
+                    <ResumeSubtitle>E-LEARNING TOOLS</ResumeSubtitle>
                     <p>Adobe Captivate, Articulate Storyline, Moodle LMS</p>
                 </Col>
 
                 <Col lg={{ size: 9, offset: 3 }}>
-                    <span className="resume__subtitle">VERSION CONTROL</span>
+                    <ResumeSubtitle>VERSION CONTROL</ResumeSubtitle>
                     <p>SVN, GIT (Github, Bitbucket)</p>
                 </Col>
 
                 <Col lg={{ size: 9, offset: 3 }}>
-                    <span className="resume__subtitle">PROJECT TRACKING/MANAGEMENT</span>
+                    <ResumeSubtitle>PROJECT TRACKING/MANAGEMENT</ResumeSubtitle>
                     <p>Trello, Toggl, JIRA, Microsoft Project, Merlin Project</p>
                 </Col>
             </Row>
 
             <Row className="my-5">
                 <Col lg="3">
-                    <h2 className="resume__title">soft skills</h2>
+                    <ResumeTitle>soft skills</ResumeTitle>
                 </Col>
 
                 <Col lg={{ size: 9, offset: 0 }}>
@@ -208,7 +284,7 @@ const Resume = () => (
                 </Col>
             </Row>
         </Container>
-    </section>
+    </ResumeSection>
 );
 
 export default Resume;

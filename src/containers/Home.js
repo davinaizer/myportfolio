@@ -2,20 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'reactstrap';
 import styled from 'styled-components/macro';
-import { rgba } from 'polished';
 
-import { colors } from '../styles/theme';
-import noiseBg from '../assets/black_noise_50.png';
+import { Section, SectionTitle, TitleSeparator } from '../styles/theme';
 import sectionBg from '../assets/cover-bg.jpg';
 
-const Masthead = styled.header`
-    background-attachment: fixed;
-    background-image: linear-gradient(${rgba(colors.black, 0)}, ${rgba(colors.black, 1)}), url(${noiseBg}),
-        url(${sectionBg});
-    background-position: center bottom;
-    background-repeat: no-repeat, repeat, no-repeat;
-    background-size: auto, auto, cover;
-
+const Masthead = styled(Section)`
     height: 100vh;
     padding: 5em 0;
     overflow: auto;
@@ -31,12 +22,12 @@ const HomeButton = styled(Button)`
 `;
 
 const Home = () => (
-    <Masthead>
+    <Masthead backgroundImage={sectionBg}>
         <Container className="d-flex h-100">
             <Row>
                 <Col sm="8">
-                    <h1 className="mb-2">DAVI NAIZER</h1>
-                    <hr className="title__separator ml-0" />
+                    <SectionTitle className="mb-2">davi naizer</SectionTitle>
+                    <TitleSeparator className="ml-0" />
                     <h2 className="mx-auto my-5">
                         E-learning &<br />
                         Front-end Developer

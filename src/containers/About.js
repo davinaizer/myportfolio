@@ -1,35 +1,22 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import styled from 'styled-components/macro';
-import { rgba } from 'polished';
 
-import { colors } from '../styles/theme';
-import noiseBg from '../assets/black_noise_50.png';
+import { Section, SectionTitle, TitleSeparator } from '../styles/theme';
 import sectionBg from '../assets/about-bg.jpg';
 
-const AboutSection = styled.section`
-    background-attachment: fixed;
-    background-image: linear-gradient(${rgba(colors.black, 0)}, ${rgba(colors.black, 1)}), url(${noiseBg}),
-        url(${sectionBg});
-
-    background-position: center top;
-    background-repeat: no-repeat, repeat, no-repeat;
-    background-size: auto, auto, cover;
-`;
-
 const About = () => (
-    <AboutSection id="about">
+    <Section backgroundImage={sectionBg}>
         <Container>
             <Row className="justify-content-end">
                 <Col md="6">
-                    <h2 className="section__title text-right">About</h2>
-                    <hr className="title__separator mr-0" />
+                    <SectionTitle className="text-right">About</SectionTitle>
+                    <TitleSeparator className="mr-0" />
                     <p className="text-justify">
                         I’m a simple person who enjoys simple things of life. A good coffee and a good music, and it’s
                         all set to work. If I’m not coding, studying or researching better ways to work, I’m cooking,
-                        preparing an espresso or spending free time with my wife and daughter. I’m also a
-                        problem-solver/fixer type of guy. I love fixing things and helping people. It doesn’t matter the
-                        problem, I’m always ready to give a hand.
+                        preparing an espresso or spending free time with my family. I’m also a problem-solver/fixer type
+                        of guy. I love fixing things and helping people. It doesn’t matter the problem, I’m always ready
+                        to give a hand.
                         <br />
                         <br />
                         I’ve been creating web and e-learning content for almost 18 years now. I started in the tech
@@ -52,15 +39,15 @@ const About = () => (
                         <br />
                         <br />
                         Currently, I live in London/UK and work as a Frontend Developer for the Marketing Design team at{' '}
-                        <a href="https://www.gamesyscorporate.com/" target="_blank" rel="noopener noreferrer">
-                            Gamesys
+                        <a href="https://www.gamesysgroup.com/" target="_blank" rel="noopener noreferrer">
+                            Gamesys Group
                         </a>
                         .
                     </p>
                 </Col>
             </Row>
         </Container>
-    </AboutSection>
+    </Section>
 );
 
 export default About;

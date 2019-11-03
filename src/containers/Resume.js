@@ -1,31 +1,18 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 import styled from 'styled-components/macro';
-import { rgba } from 'polished';
 
-import { SectionTitle, TitleSeparator, colors } from '../styles/theme';
-import noiseBg from '../assets/black_noise_50.png';
+import { colors, Section, SectionTitle, TitleSeparator } from '../styles/theme';
+
 import sectionBg from '../assets/resume-bg.jpg';
-
 import pdfIcon from '../assets/file-pdf.svg';
 import pdfFile from '../assets/201810_cv_davi_naizer.pdf';
 
-const ResumeSection = styled.section`
-    background-attachment: fixed;
-    background-color: $eerie-black;
-    background-image: linear-gradient(${rgba(colors.black, 0)}, ${rgba(colors.black, 1)}), url(${noiseBg}),
-        url(${sectionBg});
-    background-position: right top;
-    background-repeat: no-repeat, repeat, no-repeat;
-    background-size: auto, auto, cover;
-
+const ResumeSection = styled(Section)`
     min-height: 100vh;
 `;
 
-// TODO separate as a Comp
 const Timeline = styled.ul`
-    list-style-type: none;
-    padding: 0;
     position: relative;
 
     li {
@@ -62,6 +49,12 @@ const Timeline = styled.ul`
         margin-top: 10px;
     }
 `;
+
+const SoftSkillsList = styled.ul`
+    list-style-type: none;
+    padding: 0;
+`;
+
 const DownloadButton = styled(Button)`
     padding: 10px 15px;
 
@@ -82,7 +75,7 @@ const ResumeSubtitle = styled.span`
 `;
 
 const Resume = () => (
-    <ResumeSection id="resume">
+    <ResumeSection backgroundImage={sectionBg}>
         <Container>
             <Row>
                 <Col lg="8">
@@ -273,14 +266,14 @@ const Resume = () => (
                 </Col>
 
                 <Col lg={{ size: 9, offset: 0 }}>
-                    <ul>
+                    <SoftSkillsList>
                         <li>Flexibility</li>
                         <li>Communication</li>
                         <li>Teamworking</li>
                         <li>Self-Starter Attitude</li>
                         <li>Analytical and Problem Solver</li>
                         <li>Quality-oriented</li>
-                    </ul>
+                    </SoftSkillsList>
                 </Col>
             </Row>
         </Container>

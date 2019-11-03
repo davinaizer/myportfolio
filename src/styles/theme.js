@@ -1,4 +1,7 @@
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
+import { rgba } from 'polished';
+
+import noiseBg from '../assets/black_noise_50.png';
 
 const colors = {
     black: '#040303',
@@ -11,6 +14,19 @@ const colors = {
     darkVanilla: '#cfc4b2',
     white: '#fff'
 };
+
+const Section = styled.section`
+    background-attachment: fixed;
+
+    ${({ backgroundImage }) => css`
+        background-image: linear-gradient(${rgba(colors.black, 0)}, ${rgba(colors.black, 1)}), url(${noiseBg}),
+            url(${backgroundImage});
+    `}
+
+    background-position: center top;
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-size: auto, auto, cover;
+`;
 
 const SectionTitle = styled.h2`
     font-size: 48px;
@@ -29,4 +45,4 @@ const TitleSeparator = styled.hr`
     width: 80px;
 `;
 
-export { colors, SectionTitle, TitleSeparator };
+export { colors, Section, SectionTitle, TitleSeparator };

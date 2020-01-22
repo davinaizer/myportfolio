@@ -1,4 +1,4 @@
-import jsonData from '../config/config.json';
+import jsonData from '../config.json';
 
 const getConfigData = () => JSON.parse(JSON.stringify(jsonData));
 

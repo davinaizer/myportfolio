@@ -231,7 +231,7 @@ const Resume = () => (
 
                 <Col lg={{ size: 9, offset: 3 }}>
                     <ResumeSubtitle>FRAMEWORKS/LIBRARIES</ResumeSubtitle>
-                    <p>BackboneJS, Bootstrap, React, Redux </p>
+                    <p>BackboneJS, Bootstrap, React, Redux, Styled Components </p>
                 </Col>
 
                 <Col lg={{ size: 9, offset: 3 }}>
@@ -245,18 +245,13 @@ const Resume = () => (
                 </Col>
 
                 <Col lg={{ size: 9, offset: 3 }}>
-                    <ResumeSubtitle>E-LEARNING TOOLS</ResumeSubtitle>
-                    <p>Adobe Captivate, Articulate Storyline, Moodle LMS</p>
-                </Col>
-
-                <Col lg={{ size: 9, offset: 3 }}>
                     <ResumeSubtitle>VERSION CONTROL</ResumeSubtitle>
                     <p>SVN, GIT (Github, Bitbucket)</p>
                 </Col>
 
                 <Col lg={{ size: 9, offset: 3 }}>
                     <ResumeSubtitle>PROJECT TRACKING/MANAGEMENT</ResumeSubtitle>
-                    <p>Trello, Toggl, JIRA, Microsoft Project, Merlin Project</p>
+                    <p>SCRUM, Kanban, Trello, JIRA, Microsoft Project, Merlin Project</p>
                 </Col>
             </Row>
 

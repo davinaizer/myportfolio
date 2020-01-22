@@ -21,8 +21,8 @@ const About = () => (
                         <br />
                         I’ve been creating web and e-learning content for almost 18 years now. I started in the tech
                         world on an Intel 80386 at the age of 8, coding in Microsoft BASIC. As a professional I’m
-                        experienced in different languages and tools: ActionScript 3, Java, ASP, PHP, SQL, Javascript,
-                        among others. AS3 and JS being the ones I used the most throughout the years. Having worked
+                        experienced in different languages and tools: AS3, ASP, PHP, SQL, Javascript (React),
+                        among others. JS being the one I used the most throughout the years. Having worked
                         closely with different professionals such as UX/UI designers, instructional designers,
                         copywriters, frontend and backend developers, I acquired valuable knowledge on how to combine
                         technical, business and user requirements into creative and efficient products.
@@ -38,9 +38,9 @@ const About = () => (
                         customers.
                         <br />
                         <br />
-                        Currently, I live in London/UK and work as a Frontend Developer for the Marketing Design team at{' '}
+                        Currently, I live in London/UK and work as a Front-end Developer for{' '}
                         <a href="https://www.gamesysgroup.com/" target="_blank" rel="noopener noreferrer">
-                            Gamesys Group
+                            Gamesys
                         </a>
                         .
                     </p>

@@ -29,7 +29,6 @@ const Home = () => (
                     <SectionTitle className="mb-2">davi naizer</SectionTitle>
                     <TitleSeparator className="ml-0" />
                     <h2 className="mx-auto my-5">
-                        E-learning &<br />
                         Front-end Developer
                     </h2>
                     <p>
